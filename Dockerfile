@@ -17,12 +17,12 @@ ENV NG_NAGIOS_CONFIG_FILE  ${NAGIOS_HOME}/etc/nagios.cfg
 ENV NG_CGI_DIR             ${NAGIOS_HOME}/sbin
 ENV NG_WWW_DIR             ${NAGIOS_HOME}/share/nagiosgraph
 ENV NG_CGI_URL             /cgi-bin
-ENV NAGIOS_BRANCH          nagios-4.5.12
+ENV NAGIOS_BRANCH          nagios-4.5.14
 ENV NAGIOS_PLUGINS_BRANCH  release-2.5
 ENV NRPE_BRANCH            nrpe-4.1.3
-ENV NCPA_BRANCH            v3.3.1
+ENV NCPA_BRANCH            v3.5.0
 ENV NSCA_BRANCH            nsca-2.10.3
-ENV NAGIOSTV_VERSION       0.9.8
+ENV NAGIOSTV_VERSION       0.10.0
 
 
 RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set-selections  && \
@@ -95,9 +95,9 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
                                                 && \
     apt-get clean && rm -Rf /var/lib/apt/lists/*
 
-RUN ( egrep -i "^${NAGIOS_GROUP}"    /etc/group || groupadd $NAGIOS_GROUP    )                         && \
+RUN ( egrep -i "^${NAGIOS_GROUP}"    /etc/group || groupadd -g 1001 $NAGIOS_GROUP )                         && \
     ( egrep -i "^${NAGIOS_CMDGROUP}" /etc/group || groupadd $NAGIOS_CMDGROUP )
-RUN ( id -u $NAGIOS_USER    || useradd --system -d $NAGIOS_HOME -g $NAGIOS_GROUP    $NAGIOS_USER    )  && \
+RUN ( id -u $NAGIOS_USER    || useradd --system -u 997 -d $NAGIOS_HOME -g $NAGIOS_GROUP $NAGIOS_USER )  && \
     ( id -u $NAGIOS_CMDUSER || useradd --system -d $NAGIOS_HOME -g $NAGIOS_CMDGROUP $NAGIOS_CMDUSER )
 
 RUN cd /tmp                                           && \
@@ -167,7 +167,7 @@ RUN cd /tmp                                                                  && 
 RUN cd /tmp                                                 && \
     git clone https://github.com/NagiosEnterprises/nsca.git && \
     cd nsca                                                 && \
-    git checkout $NSCA_TAG                                  && \
+    git checkout $NSCA_BRANCH                                 && \
     ./configure                                                \
         --prefix=${NAGIOS_HOME}                                \
         --with-nsca-user=${NAGIOS_USER}                        \
@@ -275,7 +275,8 @@ RUN a2enmod session         && \
 RUN chmod +x /usr/local/bin/start_nagios        && \
     chmod +x /etc/sv/apache/run                 && \
     chmod +x /etc/sv/nagios/run                 && \
-    chmod +x /etc/sv/postfix/run                 && \
+    chmod +x /etc/sv/nsca/run                   && \
+    chmod +x /etc/sv/postfix/run                && \
     chmod +x /etc/sv/rsyslog/run                 && \
     chmod +x /opt/nagiosgraph/etc/fix-nagiosgraph-multiple-selection.sh
 

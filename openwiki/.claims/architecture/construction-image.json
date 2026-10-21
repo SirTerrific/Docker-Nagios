@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:4352e7363eb7500f4e31dbae6a0557b372b36b7ec21bbdc63fe9b2c817df6825",
+  "claims": [
+    {
+      "id": "claim_bb9c72d4cd224eb0b743118c185b79dc",
+      "statement": "L'image est construite sur ubuntu:24.04 et les versions des composants sont fixées par les ENV NAGIOS_BRANCH, NAGIOS_PLUGINS_BRANCH, NRPE_BRANCH, NCPA_BRANCH, NSCA_BRANCH et NAGIOSTV_VERSION.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L1-L25",
+          "version": "repo-lines-v1:sha256:8cb9ddda2e3b9af695594bbb439dc5cbb6be3d3226c06b0e0c6aab222c7a9ad9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhMmZlODRmMmM0NWIxMWYzMjk2OGZlZjgxNjM1MzFmYzNjMTk2NDVjZTA2NDA4ZmI2OTA1YzQzNjM3ZGJlMGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhNzI3YjhiYTMwNTUxZjVhYjg0YmY0MmVkMTI3NzllZjhkOGExNjIyYzlmZTk4ZmMzMjUwNzYwYzU1ZGZmMGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1NDZjZGMyNzM2YTU5Y2QzN2QxYmQ3MTM5MDQxZTdmZTY1MWMyODk5OTVkOWUyYzIwZWUwOGRlODQyM2M4NzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0a59adb76a5a472aad6c4d8a7c8138f5",
+      "statement": "Le groupe nagios est créé avec le GID 1001 et l'utilisateur nagios avec l'UID 997.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L98-L101",
+          "version": "repo-lines-v1:sha256:1cff1b5e45de0a40f97bdb7969a9830cabc94c31650fbd32bb9b8e3cbad333ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQyOWUzMjI1MTBhMGRlMmZlODgwYzJjYTlmYjQ3ZWI2NTFjNmE5NWY3MzdmZGE5OThiYTYzOTcxMTQwYmM3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjZjYmYwM2U5NjhlMzBjY2I0YzhhZWJkOTgxOTBmYTcwNWU3MjFjZTkzNTI4OWI3NjBhMGVhMjZmZWIwMTQ1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjhmYjQ1NDc0MzUwZjA3ZjZlN2Y3MzNjMDdmMTAyMzA1ZWU5OWRhMWU4MWJkNWNlOTQ1NWJhNmEzMDExYzBhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjA0NzMxMTcxMWE2N2MwNDVmYzI4OWZmODk0ZWU1NWIzMTVlYjc2OTNhYjI4NzdhMmM2M2VlY2Q1NmJhYjc5ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_9b18a21319444a54b72a7e91460406f2",
+      "statement": "Nagios Core est compilé depuis NagiosEnterprises/nagioscore au tag $NAGIOS_BRANCH avec --prefix=/opt/nagios et --enable-event-broker, puis installé avec make install, install-config, install-commandmode et install-webconf.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L113-L131",
+          "version": "repo-lines-v1:sha256:9bdb519b5adf99a2bfab7d2198ac1d617a5ea3a0247f062a4d20732b49260e6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxYzRkZDFjYTMyMTIwNWUyYWFlZGU0OWVmMDlhYTkwN2VmZDRiMzc4NGExNmY2YTBhNWYyNjA2MmFiOTNkNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhYjk2OGFhNDY5OGFlOTgwNTRkMjFiMTdiZTg2YjA5ODgxNzdmZGUxMzkxODQ0ZjQzZDJjY2ViNTUyMzQ2ZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlMjY2YjczODQ4MzhjMGYzZGY0MmFiZmRiNTU2YmRjOWY4MzhiN2UyMDE3NDJiNWM2Nzc3NTg3ZTFiNjcwNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3ZjY5YzlmZDYyY2UyMDc2OWNjOGI0ZDY0NDI3ZWYyMWExNjUxNTIzYmRjZTRjOTRkYWJkNDU0NzVkODkzMzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_788451be56cb449abf65feb47f6d34bf",
+      "statement": "check_icmp reçoit le bit setuid root et utils.pm est lié dans /usr/lib/nagios/plugins.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L146-L149",
+          "version": "repo-lines-v1:sha256:c539fc75902b0d5a7cdcf4bfcacc7376eb671101e2d257d200aba40b2cfca5f8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGFiZGY1YzA1YmNjODUzNWMzYzU1ZTQ2ZGY0YzM4MmZiMmNkNzU3NDYxODJhNDYzYmI0YThjMmRkNjUzODExZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjQyNzVjOGViM2UyNmRmZjY3MmI3MDc3M2Q0ZDE4YTM1OTI2ZTY3NGJmYTFkMTI2MGUxNTgzZmZlMzE2MWMxZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2JmMThlOTE0MDBmYmJjZWE3ZmU5ZjE1MDZkZGM5ZmFkNDI5NDkyMDFhOTQyYWI2ZWFlMTU1ZGU0OWVjZGZhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzU1OTFhNTgzMTgzOWMyNDhjYzY1Mjg5MWFmYTk1MDQwNDc1Njc3MmIxZjI2YWNhNGVjN2JhOTZhOTMzNGU5MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_873dfb1998244962922cc27d997b2fb9",
+      "statement": "Seul check_nrpe est compilé pour NRPE, avec une bibliothèque SSL située dans /usr/lib/x86_64-linux-gnu.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L155-L165",
+          "version": "repo-lines-v1:sha256:6976670abe8ed9ed17eac82d52dc34ede7b8cf2c46a24d86e3d3390e3dc17ab5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlMmVmZWE2MmE4YmYzZTBiMzdkNzVhNmJhNDRhYzdhM2FhODI2MWJjM2Y3OGZjZGZkOGFhOTU3MDM1NzQ1ZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NTU2M2IxYTY0Mjg3MjA2M2MyODczMDllODA5MmIxYzk0ZmMwMWZkZmNmNzk1YzNhZmZjYmQzOWQ5OTZhMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFhMjQ4N2NhMzU2M2FmOGRiMmQ4MWRjNWRiMGY4ODlhYTYxYWMxYThkNzczZjM3YWJjOWFlOWI5NDQ3Zjg3NWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4N2YxNDU2MTM1MTMwOWU3NTk2NWY1MjFmMzkyODRmNWI5YTczNDIwYWMxNjBkMWFkYTc2ODdjOGYxNTFmYWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_319a30a43f324afb8454d9b0d38bcfbb",
+      "statement": "NSCA est compilé au tag $NSCA_BRANCH et son nsca.cfg est modifié pour écouter sur 0.0.0.0.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L167-L181",
+          "version": "repo-lines-v1:sha256:0634fd3282e89b8a8ab4fd3b7b22e76f9cc165b4d680b6db96f42acfdc823472:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3YWE1YWM0MzY0NjYxZjI2OWUxMmI2MGViMDkxMjMxNDIxODFiZmNmYjcxMWU0MmFlMTVjMTliOGJkYTFlNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1ZWRkNTE5NzUyZDhlYjhlNGExYzJhOWU1MTlkMmU4YWY2OTRlYTVlMzhkOWUwNjI0Mzk2NDQ0YmM0YzZlYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1OTkyYmJjZDU5MzA2MDAxYTZkOThhZWQ4MGRhODY3MWMxZWFiMWY3ZjI5YWFjYWQwOGMxNzE2YmY3OGNkMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkZmVjYjY3Y2E2YjAzYWFmYTJlYTZmZjk0NTI1NjMwMDQ1ZTJhMGRkYjhkMjdmMDc3M2U1YTE5ODFhYTAzYjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ddee99c81b814419910bcc7ef788179d",
+      "statement": "Apache sert /opt/nagios/share comme DocumentRoot, avec /cgi-bin/ en ScriptAlias vers /opt/nagios/sbin/, et les modules session, session_cookie, session_crypto, auth_form et request sont activés.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L223-L227",
+          "version": "repo-lines-v1:sha256:7c1f0e3e80c967a33e4e8accbe53c165e88ed61f37a152c58215552b4bde6068:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0YjAwMTU4YTZmYWRjOGY4YThhYjZlMDQyZjM5ZDQ2NTg3OWJjYTUzZjczNTlkNWEzODZlM2RkMGRkZGRhZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwM2YwYWZlNjI2Y2RmMGUzYmJjNjJkZGY2ZTIxZGIzYjhmN2M4NjIyYzlkMDRjMzU1NTU2YzI5MzEzZDNlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDFlNDQ3Zjc4ZDYwMjA1ODYxYTc4YjUzNmQ0NTZiYjA4YWI5MDYxNzAxZGY4MjFjNWY3OTExYzA3NGMzY2MxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGE5ODliZDAxN2NhMjllYzNlZjIxZjQ3NWQ0MDY3MDhmMzI0MGY3N2ZjNDQ5MGJhYzhiODU5OWRhODdhNDc0YSJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L269-L273",
+          "version": "repo-lines-v1:sha256:01516e7c8e15c26b1ec30b8237e668f7cdf27f36e6f25200f3f8651b1502d200:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmYyNmFjOWJiMjIwODIzZWNhY2I1Y2U4MDhjNDc0ODBhZDUzNjNlYjJjNjkxNzMzZmU3MWRkZWMxOWQxMDU2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk2OTNlNDRjYjQ5YzE0ZmE2YTIxMjM3ZWRkODVlYjQxYzNmNmNjNTY1ZDYxYTdhNDhkNGVjODNkZGZiMWE1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmMxMDllMzE5M2Q2ZDdmZmU3YjdmZjMyZjdlNTRiZDIzODk1MTMzYTk2YjdjMDU2M2NiZDk3ZGRhYjQzYzcxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmY1MDYyNzJhYjg2MGU3YjdiZmFhYTU0NmJkNTM2Yjc0MjlhNDZkMTBiZjI2N2I1NmI5M2FlODY4MTZlZGNhNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f2f9a334e83f4f3d82260447a95449ab",
+      "statement": "L'overlay est copié sur / puis use_timezone=${NAGIOS_TIMEZONE} est ajouté à nagios.cfg au moment du build.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L249-L251",
+          "version": "repo-lines-v1:sha256:6dc84f3c403eed2ab3749958167f71a9714027cf45805f21a7e7e792210a0162:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk0ODhjYmQ0YjVmYjJmZTAyMmUzZGQwZTU2ZTJiODg1ZGJmMWNlYTcyNzQ5Y2Q1YjY5M2YyZmM1ZjU3ZDIxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZhMmIxNDZjYjI4Yjk4Y2Y1OWQ2OTdhNWMxZDZhNjZmYmVlZmEzNmQyYmU5MmE0OGM2MzA5ZTZiMTRiNjhmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI2NmZiNTcyMTg0NDgwNzdhODZhMzFlMTUzYTg4OWYwNmFlNDY3MDIzZjgxNmNkN2M5YjM5YzlmMTkzNTM5MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTkwNzMwZmM1MDkxZTJkNWEyMTU1MjBiNGY3MzEwYTU5MmFkMWQzZmJlZWIwNjAwM2I3NmYzNjRiZmU0ODIxZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_0390a6a323c7422ba73ec89ef0acc697",
+      "statement": "Les répertoires etc et var de Nagios et de nagiosgraph sont copiés dans /orig/etc, /orig/var, /orig/graph-etc et /orig/graph-var pendant le build.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L256-L263",
+          "version": "repo-lines-v1:sha256:c6b6872c416771f8ce08d79f88b124c2e887bb3fba7660f197e26bae61fa734f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTUyOWI1NmJiNTE3YmFiZTllODdmYjdhYmZjOGJkM2JiZTE2ZmRkMjRlN2EyMWJjMDcwZWI1OGQxNGNhMzI3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY0NjA1YjZkNjY1YTVhMzViYTU5MWU1MWQyZjBkZDAwN2M5ZjM4YWU1YzIxMmM4N2Y2ZjcyYzAxODdlODNkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ4NTc0OWUwYTRkZGM1MGYxOWY3NWIxNzI4Y2U4ODViNjI0ZTUyNTY4YmQ0NWVjY2NiNzQ5OTQyNDA1ZTc5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTkzMjEzZTQxZjhkMTZlNTc0Yzg1ZWUzN2JkN2JiZGI0Y2U0ODc2YzI5OGE3YWZmOGFkN2I5ODk5NjZkZDhjZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c828604f9874ee39c15637aa6c56ba7",
+      "statement": "Les scripts run de l'overlay, dont /etc/sv/nsca/run, sont rendus exécutables et tous les services /etc/sv/* sont liés dans /etc/service.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L275-L289",
+          "version": "repo-lines-v1:sha256:23b55673f22ba29fdfb502249b22b1051a2a37797878aff1d428263780c43c4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmZDNhMmM2NjI3ZTdlMzM2ZmQzZDczMGQ4NGNhNmQxYTdlOTFiZWIxYWQ5MjY2ZmZhYTEwMjdkMjFhZmQwMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjRjZTgyNDE0NjA3NjRmOGYwOTJlZjM4OTE0NTAwMjZiNzdjYTUxY2E2YTM1ZDJlYThkMjJjODY3YWU1ZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMTFmZDQ1YjkyZjVjY2M5YWFkNDNmYjEyNzEzZTI5ODMzNGU1NTI3NmQwNGI5MmFkOTQwZTg4NmE0ZjJjN2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBmMjUxMmM5ZjMzYTU0Y2Y5NGU1MTFkN2IzZDk2ZDcyOWM4NTRjNjc5NzU0Y2QyYzU5ZmE1ZTkzODY0Yzg0NGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7c512a93e3fc4d34acad9fcbb5c3b19f",
+      "statement": "L'image expose les ports 80 et 5667, déclare six volumes et lance /usr/local/bin/start_nagios.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L303-L307",
+          "version": "repo-lines-v1:sha256:5f58e16c2553a6797b350aa78965814673501c97b1ad1f3814f3d95a554f63d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI5NGEwNWVhYzNhNjVmNDBmNzI3MGRlMWM3NGJiMTBkNjYxZTkwYTNjZDUxMjZjNzM0N2NiNDgyNGE5ZGE3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUwNDgwYThmNTFmZmQ4NWYyYzkwMDZiMWI0OTI3ODA2NTNkZTY1M2EyZmQ5NmY1NWQ4ZmQ1NmFjNzU3NDBmMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTliOTBmN2Y5YWU5MTVmM2M2MDY2MmVlMWJhN2ViZjY1Yjg4N2RhZDJkYmQwM2E0NTVlODMxMmEyYzU0NWY4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e79ef1f534ee4decacfa0e3ceb1bc7cb",
+      "statement": ".dockerignore exclut uniquement .travis.yml et build.sh du contexte de build.",
+      "evidence": [
+        {
+          "resource": "repo://.dockerignore",
+          "version": "repo-file-v1:sha256:974d94c168f6bb7da1daf8fe6b8eedded10b95e911396739475db55e1da21a90"
+        }
+      ]
+    },
+    {
+      "id": "claim_67257bb8bb574d3e8d09390f8a684e4b",
+      "statement": ".gitattributes force des fins de ligne LF pour les fichiers texte.",
+      "evidence": [
+        {
+          "resource": "repo://.gitattributes#L1-L2",
+          "version": "repo-lines-v1:sha256:4304126b59b7aa5b7f0ad7d1d7b7dd91c9a4655db99ff1c54f1a735ab495a33e:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYwZjM1MmQwZGIxNDA0YzcwYWZiNGJiOGIyY2EzZmQxYzYxMDU3MmFhNDA3MjBlOGEwYjdiYWE3ODg1NDE4YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdmNTRiNmFlNTFhZmFiOGMxNGEyMjMyYTczMGZjOTFhOTM2MWZmOGIzN2QwN2U1ODY0OTE4NWRjYTI0MjQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}

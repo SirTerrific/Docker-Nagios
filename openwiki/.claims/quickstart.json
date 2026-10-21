@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:8bfd4e270c7db9a21218a9e8045d2efe9be57726d0b3311728e18fcd07b55321",
+  "claims": [
+    {
+      "id": "claim_3d8eb2cbc20748f9bbfa11ebeca3295d",
+      "statement": "Le dépôt construit une image Nagios Core basée sur Ubuntu 24.04 qui inclut Nagios Plugins, nagiosgraph, NagiosTV, NRPE, NCPA, NSCA et postfix.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L1-L96",
+          "version": "repo-lines-v1:sha256:5021bf8936a6e57ac11634d3f1e3b720234353860535db891b4cf95cf06557d9:eyJzZWxlY3RlZExpbmVDb3VudCI6OTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRhMmZlODRmMmM0NWIxMWYzMjk2OGZlZjgxNjM1MzFmYzNjMTk2NDVjZTA2NDA4ZmI2OTA1YzQzNjM3ZGJlMGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmNjdjZGQ2YThmODVkYTM0MzZhZGY2MmM1NDYwN2UxZjc5NzM1NTg5YzM5ZDY4MWEwMTQ2MzQ2Yzk5MjI4YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4NmNjOTVhMjA3Njg2MTZlOGMwZjJiYTk0N2E4MzIyMTIwNDZlODc2MGZkZmZlOTVkZjc3MzhhN2ViZTE3OTEifQ"
+        },
+        {
+          "resource": "repo://Dockerfile#L133-L221",
+          "version": "repo-lines-v1:sha256:c15dc3ab68f826b4dc192091d1fccaed11c7c90805996db24b5172addf1062e3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0NDhkY2QxZTM0MjU0YmJiODUyMWRmOGI4NTBmMjg2ZTAxOTkzM2M1YzYxZjQ2MWEyYjRhNjA0MWVjNzNiM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZjJjNDkzN2Y4MWI5MjNhNWYyNmQ2Yzc1YzQyYmU5YzY0NGFlOGMxYzM1NGExNjZkMDgxY2IzMGJhNTRjMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyZThhNGNmZGE2NTU2Yjk2MGU1OWYwNjY4YmNmNDdkMTExMDE1MWNlODI4NDBiMGY4OWY1OWQ1NTJlMWFiMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiZTY0ZjM3Y2JhMTFkOGJiMTFhYmE0YTkyY2ZiMjA3MTg3YTcwZjVhMzZkN2JiNjZlOGRmNDYwNDYwNWQ5NTIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cd995e12afb84266bd9303daf59a32b3",
+      "statement": "L'overlay est copié à la racine de l'image par ADD overlay /.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L249-L249",
+          "version": "repo-lines-v1:sha256:59488cbd4b5fb2fe022e3dd0e56e2b885dbf1cea72749cd5b693f2fc5f57d21c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk0ODhjYmQ0YjVmYjJmZTAyMmUzZGQwZTU2ZTJiODg1ZGJmMWNlYTcyNzQ5Y2Q1YjY5M2YyZmM1ZjU3ZDIxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk0ODhjYmQ0YjVmYjJmZTAyMmUzZGQwZTU2ZTJiODg1ZGJmMWNlYTcyNzQ5Y2Q1YjY5M2YyZmM1ZjU3ZDIxYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI2NmZiNTcyMTg0NDgwNzdhODZhMzFlMTUzYTg4OWYwNmFlNDY3MDIzZjgxNmNkN2M5YjM5YzlmMTkzNTM5MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzIyNjUyYmM1ZGI5ZWE2OWVjOTU3YTNjYTA3MDdkZGNhYmI2Njk2YzQxM2FmNTk3NzdhMjc1M2IzNTU2YWQ3YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5cee5ab63e6c46aca07f7504adbb3988",
+      "statement": "L'interface Nagios est servie sous /nagios/, NagiosTV sous /nagios/nagiostv/ et les graphes nagiosgraph sous /cgi-bin/show.cgi.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L52-L56",
+          "version": "repo-lines-v1:sha256:932d391af05d3ee719829325aeb54715f4708636b2be244ff6a1434a87e572b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M0MjNkY2FiNTM5ODBhMWM5NjkxMjYwZmQyZjcwOWNiMjM3MjM4MTFiY2RjMDZiOGY4YzYwMzEyNGYzYzNkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQ0MGU1M2M2ZGZlZTAyMzdmYzhmZWM0MmFjMWIxYWMwNDAwYTBjM2RkMzQzMDZmOTU1NmNhMzI0ZjljNWM5MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGYzN2ExOThlMGZlNzE4MzNjMDRjOTZjMDAxNzVjOTM0YTg3NDA4OTg2YTllNTJkNjgyZTkyMTg5ODQwNWI4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWQzZjM1YmJkODJhNTc3OTk4M2JkNGQyZDA2NzkyZjRjNTA1YjQ1ZTQ4ZjA4MDVkNDcxNWEyNDc4OTRkMWFkMCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}

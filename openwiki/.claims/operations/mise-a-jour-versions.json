@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:47e091331f87845bbbaf16142f339b797305e86932bda09bcba2bc0125eee966",
+  "claims": [
+    {
+      "id": "claim_51e4dd4d49e344c3bc8554673abdd52b",
+      "statement": "Les versions actuelles des composants sont nagios-4.5.14, release-2.5, nrpe-4.1.3, v3.5.0 pour NCPA, nsca-2.10.3 et NagiosTV 0.10.0.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L20-L25",
+          "version": "repo-lines-v1:sha256:457236c5ebbdd8435fde151e9ae33cbd70463b555dc877b79981ce104451db1c:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGMyMWRmOGI1M2VjOTRmMGVmYTg1MGMwMjg3M2M3Mjk1NDRiZWE5NmU4M2RkMjllZGNiYWQ3YTk3MGJhYTk1MiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2E3MjdiOGJhMzA1NTFmNWFiODRiZjQyZWQxMjc3OWVmOGQ4YTE2MjJjOWZlOThmYzMyNTA3NjBjNTVkZmYwYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmY5ZTBhNjY1YjQ2MzExNDQ0MTdkZDgwNmY0ZTk3MjRhOGJjYWJjOTYzNjVlMmU2M2I2MWNkOTFmMGM3NGZlMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzU0NmNkYzI3MzZhNTljZDM3ZDFiZDcxMzkwNDFlN2ZlNjUxYzI4OTk5NWQ5ZTJjMjBlZTA4ZGU4NDIzYzg3NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_184187545a7544fa9da69b32fb050af6",
+      "statement": "Le tableau des versions du README indique toujours Nagios Core 4.5.12 et n'est pas synchronisé automatiquement avec le Dockerfile.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L9-L16",
+          "version": "repo-lines-v1:sha256:f447555fc42d81f5f91a9588344a8a58e216ab48f0cfe421e4ccf9f12e904ceb:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzkwNDljNTAzZGNjZjFhZmI2YTg1YTFlMGVkOWMyYjVkODg2NGU1YjY5MjhiMTAwMzVmNTNjZDU4MmE3NDg1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjY3OWFkNTFhY2ViMjQwMWNlMjNlZWMxNjhlZWEwNDkzZjdlZmI2YWJkNDdlMDlhYTAxOTA0MDBkZTdlOTY2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI0OGYyYzY4Yzc5YzNiMmEwMDQ0MjZjMjM3ZWFkZmM3ZTU4ZDExNzI3OTllMzM3MjNmMDNhMDQyOWEzMmU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiNjViOWQ5Y2JkZDQwN2ZjMjExMjk5NTE4ZjAzNzdhOWI4MDhiNTI4ZTI2NmQwMjkyZTFmNzc1ZDk1YzhiMyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c364ff68b7140d59ac8cba640072c56",
+      "statement": "L'étape NSCA fait son checkout sur $NSCA_BRANCH.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L167-L170",
+          "version": "repo-lines-v1:sha256:9aa321ef41b6175ec586d43975d14a003ae3de369ea2b68a9101d8a1f84f8030:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdhYTVhYzQzNjQ2NjFmMjY5ZTEyYjYwZWIwOTEyMzE0MjE4MWJmY2ZiNzExZTQyYWUxNWMxOWI4YmRhMWU1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E4NzFlODdhN2Y1YWRhZjZhYmEwOTcxZTVlMmZkNzQwZmFhMjYwOWI1YWU1Y2IxNDZkZTY4Y2Y1ZWUxM2NmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU5OTJiYmNkNTkzMDYwMDFhNmQ5OGFlZDgwZGE4NjcxYzFlYWIxZjdmMjlhYWNhZDA4YzE3MTZiZjc4Y2QwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmZmMmY2NmQxNWE5YTM0ZDNjZGM4NDYwOGVhZWE0YjQyNDA5YjhmM2RmN2VlOTJlMWEzNzNlOTg2Mzk2OWI4YyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6bd36d8f65434606bafa0831b672cf7b",
+      "statement": "start_nagios ne copie les fichiers d'exemple que dans un volume vide : une nouvelle option de configuration n'atteint donc pas les installations existantes.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L7-L25",
+          "version": "repo-lines-v1:sha256:5610fc18207c7fd81cd7919ed1013720dc139f84bf6f61344766c5ee177be23b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4YWExYjU2ZmY4NWYwZDgyYjg0NDk1ODFjZWZiOTMwMTZiODNiYTU3NzNhNzE2OTI1YTMyZWU2ZTk3Njk3NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiZWUzZTgwNzQxYTNkMmQwMDY4ZDIzNmIyOGM1M2M5ZjdiMzUzM2NlYjZhYzllNDUzNmEwYmIxMTZhMDM1MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0OTZmYjZmMmUyNzhmNTc5ZDcyMjY5Nzk2MTU5M2FjMTZhNmUyZTIyZjgwNDYwOTlhZmVmYzk3NjI4ZDc5NGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a23c7dfbf58b46929c1516c6bd65634a",
+      "statement": "Le test de fumée vérifie que cmd.cgi rejette un POST sans cookie CSRF, délivre un cookie NagFormId, accepte un POST avec un cookie valide, et que le commentaire accepté atteint status.dat.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L68-L98",
+          "version": "repo-lines-v1:sha256:d724a1d9b328198543cee8c38d2ca19af84d8ae9c6792fd816ea9a3c5e09ebff:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzZTkwZTQ2OTY3NWQ5MzM2ZWMwMDUxOTc1YTEyYzM2NDlmZTExN2Q1ODllNWY3ODYzNTU3ZDI1ZjUwN2E3MTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MDM1OWQ5YzQyMTEwZjRhZTlmYTU0NTY3ZWZjNjgwYmVkYTJiNzNlM2JiNDY2Yzg3NWViYTNmMmYxYTVhMzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjNDgzNmIzMzNhMjc0Yzc5ODdiN2U4OTliMjM0MDk1ZWRjNjQyNGViMjUwN2YzZWU2MzhmMjViM2U2MDU2OWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}

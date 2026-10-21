@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:168d3c4286c0ca59d2d35934b927dad7d78b9093034cae355881e5e2bba6f7c3",
+  "claims": [
+    {
+      "id": "claim_0e7dbe37fdfa4d33a37fe81b9bedf1d9",
+      "statement": "nagios.cfg charge commands.cfg, contacts.cfg, timeperiods.cfg, templates.cfg et localhost.cfg, plus les répertoires /opt/nagios/etc/conf.d et /opt/nagios/etc/monitor.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L229-L231",
+          "version": "repo-lines-v1:sha256:db3cf19446003eaf1dc99e0c6f0974eaa84f422bd609253e3973c15788c13393:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjNmNGNkMjU3OTVhODU0ZTRkYjZjODZiYTlhN2Y3MjI0ZDEzMDdmYTlkNjlhNmYxNjk0NmVmYTBjMTM0ZTFmMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGMwMmZiMjJkNDJjZjhlN2VkNmQ1YjczOWMxMjljZGJlOTU5ZGJhNGMxMDNmY2U3NmMzOTJmMTY4NWE4NGVlZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTQ0NThkZmIzNmU4YTg0NDQ3OTMxOTZkMGJmOWNhZDU4MThkNjFmNTNiNjU1NDc3NjZiYjYzN2VhMjQwODdhYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjA5MjNhYjhjOTBkMGRiMGIwOTRkMDYxMGIyMjI0NWYyY2M5MjY0ZGJkNzA2N2M1NjcwNzUxYjk4YWU1NDQ0NCJ9"
+        },
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L1347-L1348",
+          "version": "repo-lines-v1:sha256:c2497be0baf0f0b8d2c77465d2eb698cd6e02fda6008192f39de8cea57603623:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDUzMTk5NWI1NGY0NzM4ZTFhNWE1ODU0YmQ3NDE0MDA0YTg4YjAxMTdhNjVhODJhZjA5YjRlMDA3YzJhMDZkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzg5ODAzODI3YmQ4NWNiYTIwZDk5Nzk5M2MzNjZmNjk5ZDU0NWIzMzViODFhODRjZjNmYmE5ZmJhM2EyZmMwMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjgxMTBjMjA3YTBiYmExZjhiMjExMjkzYTZlZjY3M2EwNjJhMjQxYzhhY2E1YjdkNjAwMGJlYWQyN2MwZGUxZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L29-L35",
+          "version": "repo-lines-v1:sha256:dc7a457302701f558dd7f5396983aa24fe24391fc17bd8e048cc0818f1e5b97c:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWFiMmRiNGRkNjZiMWE3MjdkMzE1ZWIwZWJlMDQ3ZWVkM2IzNGM2ODNiY2QwNjZjNzQxNWE2ZGUxMjMzZTIzMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTFkNzhkNGZjMmM1NDVjODI0YTYwYTI1ODNhOWJiNzViNjljZTMxNGEzZTI2Y2YzMDBjODIxMmZlYjZmNGI1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjQwODkyODg5MmQwNjc2ODc4M2E3YzY5MjI4OGVlOTMzZjA3Mjg2NjI4NjZiODRjYzEzMzVmYWZhMzBjNGQzZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTQ2ZjA3MWNmMTc3MWE0ODZmYjhmZGMxNjk4NWUxNTMzMjM2M2YwYmJjNzZiZjZlODlkYjE1ZDcxNjdlN2ZlNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a2b7fd9df8340ed96f949cf9cc32dbc",
+      "statement": "Les commandes externes sont activées via le pipe /opt/nagios/var/rw/nagios.cmd.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L142-L154",
+          "version": "repo-lines-v1:sha256:13c9c679657e37649563b577d64001c6d91abbd9b36cc15dde99b39854857c5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZWU0N2Y2MGJhYmJlNzM0YTdkMjEyY2U2MjJiYmRmYjRhNGJlNmFkODRlZTNlYTc5ZjM0NmE5N2MzNzUyYzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUyZTRiZDdkMTVkZDM5ZjRjMzljNDkyNTY4NzhmMmY1OGM2ZTNlZGVmZDQ4YjFhNzUzYjI1ZmZiNjBkZDUzNmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFiN2YyZWQ2MzllZGRjZDBmZDMzNmRhNmE4NGU5MTY1ZmM2YTI1ODI4N2FlNjU5ODk4Y2NjNWI3N2VjNWYwNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_319b437209064b3cbffb6ffd26883e3f",
+      "statement": "La rétention d'état est activée avec /opt/nagios/var/retention.dat.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L607-L653",
+          "version": "repo-lines-v1:sha256:ae2abb52791801790c8510153776771c5d774ce678132bcc8c56b2fd6c0eab36:eyJzZWxlY3RlZExpbmVDb3VudCI6NDcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiNGI4NmNjM2QwYTk1M2QwYzhhODJkZjk1ZWIyOGU0MGE1MDA1OWZkNzM4OTU5M2FiMmM1NDUxNzljYWJlMzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxNzU1ZmNkYWMzMDdlOGEwNjNhYTg1OWJiMjhlMmViODgzOWE2M2QzYmY3NGMwMDRmNjdlNjdiOWFjYjY3OGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzNjU5NTE1Y2Y0MjkzMWYwMmY2ZjZhMWY5ZjU1NTgyMDYwZDAwMzcxNzBiMDY4MTMxMGJjM2Q5NjFlNTU1MTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_237693eec0584cc9af6c98c133d95499",
+      "statement": "Les perfdata des services sont ajoutées à /opt/nagios/var/perfdata.log et traitées toutes les 10 secondes par la commande process-service-perfdata.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L810-L877",
+          "version": "repo-lines-v1:sha256:ad7f61bcfe687e78260da37639cd857d2a4b90a1a4b2e0f9f80b030e228b5990:eyJzZWxlY3RlZExpbmVDb3VudCI6NjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4YjUxZjM4OWZkMzVhNjFiMTBhMTIzMzRiMTg4OWRkMWE0NTJmOGU4OTExN2I4M2I4YTEyOTA4NTNmZjg2N2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIyOWI2NGQ3NGMyMWY2ZDlkOWEzZDhmNGFiZGY1MWVhNzJiMTkxOGNiZjJkY2MzZTc3MmFkYWEwY2M0NDE0NWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1M2M4ZWM0MTZiMzI4MGRiNjc4ZTkxMWQ5NGM1MjY3YTFkZmM0Nzc0ODZlNmZmZmFjYzk0Mjg4NjRiYWVmZTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_52d6d9ca4f13471aae022693bfeed6e7",
+      "statement": "La commande process-service-perfdata exécute /opt/nagiosgraph/bin/insert.pl.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/objects/commands.cfg#L234-L237",
+          "version": "repo-lines-v1:sha256:0913c6b93c7ec2e69027827a22896bea2480be8d4874895a497a97a4f75265c7:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDExMzQ0YTc0MmNiNTlmNTRjZDk1NTBkNmMzOTRiNmZhZTY0MjMwYjQyZjdkMmZkZGJlZWE3ZTUxNTBlMDg0ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmQwNzZiMzVlZTYwMWM3ZDhlMTgyZGQyMmU0YThkYzdiNTlmMzk4ZjA5OTkyNWNkNmY3ODc5MDQxMjBjN2NhYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f7de8dd736e445a8ce78e1a6f69b3ac",
+      "statement": "cgi.cfg active l'authentification et accorde tous les droits authorized_for_* au seul utilisateur nagiosadmin.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/cgi.cfg#L78-L172",
+          "version": "repo-lines-v1:sha256:ab8e171cf27a8a336c75376a9f127d554585f9e3526618a205c04872d929ef39:eyJzZWxlY3RlZExpbmVDb3VudCI6OTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjYzU3MzIwNWE5MzUyZmI3ZWEzMGI0ODMwMTZhMDZmNDkzNWFlYTBiYmMwZjRiNjJiOGUzMzE1OTY2ODA5ZmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOWIxMjc0ZTRjYjMyZWVlZjhhMzRlNzEwOGM2N2FmYmZjN2I5OGM0OTc3ZDhiZDcxYzg3YWY2MjFhMWU4YjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYjljY2VkYTVhYTUyMGM4ZGY5ZjEyMmFiOTFiZTE0OWI3NTQzMjk0YjYxMDlkMjQxOGFmMjBmZThmMzAzNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhM2NmNTE5MjM1NGY3MTYxNWFjNTEwMzRiM2U5N2MyMGVkYTk5NjQzZmNhZjViYmU2ZDQxYWQ1OWJkMTIxNjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3f91ba6097ed45768dd698883fc77475",
+      "statement": "cgi.cfg ne définit pas cgi_cookie_fail_open : c'est la valeur par défaut de Nagios qui s'applique.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/cgi.cfg",
+          "version": "repo-file-v1:sha256:cb15114abec7f37cc12f4856ff279d717ec7e5599b82649c68efd049743d1a0c"
+        }
+      ]
+    },
+    {
+      "id": "claim_558b9c363e03402cbd442a4c130f0a4a",
+      "statement": "Le modèle graphed-service ajoute une action_url vers /cgi-bin/show.cgi de nagiosgraph, et les services de localhost héritent de local-service,graphed-service.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/opt/nagios/etc/objects/localhost.cfg#L64-L68",
+          "version": "repo-lines-v1:sha256:0aac879432e463268d5687127b63c145acbab9322c79ad43a7fe9ea134bb7916:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM4NzRjNDJhNThmNmQ3NGNjNmYwY2FlOGMxMGE4MGUwZWM5MjdhOWUxYTU3YzFiM2ZlZWE3ZTcyNDNmMTYxNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWIxNGFiMjEwMWMwM2I4Yjk5ZDNlOTg4ZDU3MTYwNWU3MjA1ZDQ4ZDFkMWRhOWJhYTM5ZjEwMGFiYzI5ZDNiNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTM0YWJkYTQyYzE1MGM0NGQ5ODc3OGVkZDEyMTFkMzk4NzQ4NDhjNjhkMzFiNzIxYjVhNGE2MzBkZWIzNjQxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGY4Y2Y2ZTYyMGMwODZkMDMxMjJjMjE1OGQxNjY4NmQyYjNjMGRkYTdiNjVkN2QyNzhiNWQ1YWU4YTYwMzEyYiJ9"
+        },
+        {
+          "resource": "repo://overlay/opt/nagios/etc/objects/templates.cfg#L188-L192",
+          "version": "repo-lines-v1:sha256:1ba3352e22665b72441fae4921fd8635bf24cfc78ac8ff3132e34c651bd51c0c:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjYxYmJmZDZkN2MwMmE2NGFiZTNjMmE1NWFlYzgxNzgxNjAxYzdmMDNiNTU0M2I3ZTVhYzg0MzRlMDAyYTM0MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDEyY2EzNDVjY2Y3NWJmOWMwODA2YmNlNjk1YmU4ZGU4MDhiNzk5ODQyNTFhN2E1NGQyMDJjZjYxMDFkZDQ1MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDNhOWQ1MjM5NGUzZjJmYzZjN2M3ZDc2YWJiMjQ0ZDFlNjdiYWQ3ZDUzYjE3MGU4MWViMzkwZTA5YmU3ODg2ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_16dc2466bd9144919ac6bc0a42269d45",
+      "statement": "Le fichier nagios.cfg de l'overlay ne contient pas use_timezone : la ligne est ajoutée au build à partir de NAGIOS_TIMEZONE.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L251-L251",
+          "version": "repo-lines-v1:sha256:9fa2b146cb28b98cf59d697a5c1d6a66fbeefa36d2be92a48c6309e6b14b68ff:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZhMmIxNDZjYjI4Yjk4Y2Y1OWQ2OTdhNWMxZDZhNjZmYmVlZmEzNmQyYmU5MmE0OGM2MzA5ZTZiMTRiNjhmZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZhMmIxNDZjYjI4Yjk4Y2Y1OWQ2OTdhNWMxZDZhNjZmYmVlZmEzNmQyYmU5MmE0OGM2MzA5ZTZiMTRiNjhmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDdiMmU0NDM5NTA5OWE0ODQwYWEwODA2M2U2NTlhOTY5NWJmYzgyNTc4ZDVmOGM1MjBiYzc2MWQ3OGM4MDVkMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTkwNzMwZmM1MDkxZTJkNWEyMTU1MjBiNGY3MzEwYTU5MmFkMWQzZmJlZWIwNjAwM2I3NmYzNjRiZmU0ODIxZiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}
