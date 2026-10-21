@@ -1,0 +1,35 @@
+name: build-test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Build image
+        run: docker build -t nagios-ci:${{ github.run_id }} .
+
+      - name: Start container
+        run: docker run -d --name nagios-ci-${{ github.run_id }} nagios-ci:${{ github.run_id }}
+
+      - name: Smoke test
+        run: |
+          expected=$(sed -n 's/^ENV NAGIOS_BRANCH *nagios-//p' Dockerfile)
+          bash tests/smoke.sh nagios-ci-${{ github.run_id }} "$expected"
+
+      - name: Container logs
+        if: failure()
+        run: |
+          docker logs nagios-ci-${{ github.run_id }} || true
+          docker exec nagios-ci-${{ github.run_id }} tail -50 /opt/nagios/var/nagios.log || true
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker rm -f nagios-ci-${{ github.run_id }} || true
+          docker rmi nagios-ci:${{ github.run_id }} || true
