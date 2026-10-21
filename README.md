@@ -2,18 +2,31 @@
 
 Docker image for Nagios
 
-Build Status: [![Build Status](https://travis-ci.org/JasonRivers/Docker-Nagios.svg?branch=master)](https://travis-ci.org/JasonRivers/Docker-Nagios)
+Build Status: [![build-test](https://github.com/SirTerrific/Docker-Nagios/actions/workflows/build.yml/badge.svg)](https://github.com/SirTerrific/Docker-Nagios/actions/workflows/build.yml)
 
 Nagios Core running on Ubuntu 24.04 LTS with NagiosGraph & NRPE
 
 | Product | Version |
 | ------- | ------- |
-| Nagios Core | 4.5.12 |
+| Nagios Core | 4.5.14 |
 | Nagios Plugins | 2.5 |
 | NRPE | 4.1.3 |
-| NCPA | 3.3.1 |
+| NCPA | 3.5.0 |
 | NSCA | 2.10.3 |
-| NagiosTV | 0.9.8 |
+| NagiosTV | 0.10.0 |
+
+### Building and testing
+
+```sh
+docker build -t nagios-fork:4.5.14 .
+bash tests/smoke.sh <container> 4.5.14
+```
+
+The `build-test` GitHub Actions workflow runs the same build and smoke test on each push and pull request.
+
+### Security
+
+See [SECURITY.md](SECURITY.md) to report a vulnerability. Dependabot proposes weekly updates for the base image and GitHub Actions.
 
 ### Configurations
 Nagios Configuration lives in /opt/nagios/etc
