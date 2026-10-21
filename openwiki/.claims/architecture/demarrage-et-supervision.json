@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:735fa71a637255db09cc117e9f0c409533669f0ece5b34e3f6e796f691d760f3",
+  "claims": [
+    {
+      "id": "claim_fbccb64c7e8e4bb6a44b38a6c9015a44",
+      "statement": "start_nagios copie le contenu de /orig dans /opt/nagios/etc, /opt/nagios/var, /opt/nagiosgraph/etc et /opt/nagiosgraph/var uniquement lorsque le répertoire cible est vide.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L7-L25",
+          "version": "repo-lines-v1:sha256:5610fc18207c7fd81cd7919ed1013720dc139f84bf6f61344766c5ee177be23b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU4YWExYjU2ZmY4NWYwZDgyYjg0NDk1ODFjZWZiOTMwMTZiODNiYTU3NzNhNzE2OTI1YTMyZWU2ZTk3Njk3NWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiZWUzZTgwNzQxYTNkMmQwMDY4ZDIzNmIyOGM1M2M5ZjdiMzUzM2NlYjZhYzllNDUzNmEwYmIxMTZhMDM1MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0OTZmYjZmMmUyNzhmNTc5ZDcyMjY5Nzk2MTU5M2FjMTZhNmUyZTIyZjgwNDYwOTlhZmVmYzk3NjI4ZDc5NGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3195e4527662471f8ac6251c2f37cbc2",
+      "statement": "htpasswd.users est créé à partir de NAGIOSADMIN_USER et NAGIOSADMIN_PASS seulement s'il n'existe pas déjà.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L27-L30",
+          "version": "repo-lines-v1:sha256:8042197ed52713a7c8d3e084a702039e55f775c612cd95cdd7e8e85c454c0d34:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWY5OGYxMWJmNWU2N2M0YWYwZWNiMWZhNzc1NGVlMjgzOWNkMWY5ZWYzMjFmOWExMzYwZDdhM2RlNGJlZWJmNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTc5MjMyYjNmN2M0MzhkY2IzZDgwNTFjZjg3YmUwZWJlYTdkMzlkNWQwNDZiZjYyMWQzYThhZTliNTZhYjcxOCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRkMDQ0YjA5OGE0ZDMyNjBhOGU1ZTA0MTE1M2E4YjRlODg3ODRmODVkZjBjMDI0YTYwMzg2ODY0NzEzNDkxMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_1e0de3f11b4543e097a55c2815c3530c",
+      "statement": "start_nagios lance runsvdir -P /etc/service et, sur SIGTERM, SIGHUP ou SIGINT, arrête les services avec sv force-stop, puis termine les processus orphelins avec un délai de 5 secondes avant kill -9.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L32-L55",
+          "version": "repo-lines-v1:sha256:d9979d273de5f026d830645a508aa060399c813441d81fff572c29cb1681af61:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjQ4NjRjYzE4NzY3NjMyMjkyYzg4NmE1MzU5MmM5ZjYwMjhkZGFiMGU5YTc0OWQ5NzNhNDVkOTU3YjBkNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyOGE5NDcwN2QwNDMzNTVlNzIxZjgzOTc2MzgyM2Q2YTA2YThhMDQ4MWQ1NTRiNzZiNjRmZDIzOTQ1NDM5NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNTQwZWJiYjNhMzM3OWZjMWY1MTQxYWM2M2RkMTMzZDRiNWIxMWZjM2RmMGMwYWQyOWI0ODIzNzUyZGI4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_398a4ff971414e469c27989fb7161d6e",
+      "statement": "Le service apache exporte TZ depuis NAGIOS_TIMEZONE et lance apache2 -D NO_DETACH.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/apache/run#L1-L8",
+          "version": "repo-lines-v1:sha256:de76d0be97ec2975221cf19c954b1a32af3b8b5f0b0bdd154f6532770f1d8be5:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg3NWY5Mjg1NDZhZWU3ODU1Y2IxZGI5YWZjOGFiM2YxYThhMzRkNDNkZTViYmQ2MmY3MDc2ZDdiYTlmMzkxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDJkODEwMDMyNGQ3NjhmNGViYjQwYzdkMTBlODQ1MTIyMDU2MGZhNTdmMjg1MjA0Zjc3MzFkODkwMWVjZDdlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_29b76813c39d4f6ca6476a3d68c3ee14",
+      "statement": "Le service nagios fait un chown vers nagios de /opt/nagiosgraph, tente de réinstaller nagiosgraph depuis /tmp/nagiosgraph si ngshared.pm manque, puis lance /opt/nagios/bin/nagios avec nagios.cfg.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/nagios/run#L3-L18",
+          "version": "repo-lines-v1:sha256:c5073edcfd5d6980b48b381b9a5a7fe198118195a5cb41a8a82903d3e8575700:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNmNiMTVhODY3MjQ3N2Y0NGQxYWNkZTEyNDgzNTc2YjJhOGY0ZTllZGRlZGI5ZjM0MWU3MDllMzRjMmUxOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTRhOGIzZmE5OWRmNDUzYzcwYzExYmExZTY3ZDhiNDljMGMxYzMxYjE0YzJhZjE1M2NkYzlhYTRhMGE3YzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5NjIyZmFlMmFiMDJmZTM1OWVkMTUwOTY0YTkyNjUzNjk3YmZiMjM1ZTIwOTQ3YWEzYzNmMzg1NDg0ZTk3YmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e8638c49ad1a4f67b28f8f13cef11b55",
+      "statement": "Le build supprime /tmp/nagiosgraph après l'installation de nagiosgraph, ce qui rend inopérante la réinstallation tentée par le service nagios.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L183-L194",
+          "version": "repo-lines-v1:sha256:e430cc187350bcf503ab6bc8b3064f235c9330e342c529ce16a8b96da40b8703:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0MzA1YTc5NzlkZDQyNTM1NDU1NmY0ZjlkZGNkMWIzMjUxNzVjYjY3Y2ZhMmMxZTI1MTMzMWZlZmEyNTMyZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNTRhMWNiYzk2ZDU4YjA0OGY4OTdkN2RmMzRmNDUwNGQzM2VhZDI1NGQyZGQ3MmNiMDA4OWFjY2QxYzczMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNWEyOTMxMmEwNzRjODM4YTE3NTE2MGQ3MDljMjY0OTgzMDJhMjY4NDI2OWZmYTMwMjQ1ZmY2ZDI4ODQ2NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0MDJkOGVkZTQ5YWVjMWRkZWU4MGNjYWMwOGRhZGUwNmQ4NmU4NzA2M2Q4NjU0YWNmN2E3ZDMwYjIxNDc2ODkifQ"
+        },
+        {
+          "resource": "repo://overlay/etc/sv/nagios/run#L5-L16",
+          "version": "repo-lines-v1:sha256:9b1003b774e31968a619cfe43d166adf3f37280c9a9987636980e86078888333:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YmI5NGVhMzU1ZWUxNTI0MDg2NTJjMDZhNTExNTk3NzEzYzM5MzhkODZhMTRmZjVkZDQxMTU4NmE2ZWRhMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkMjk3ZjU5ZmExZGU4MjViNDcwNjBiYjhkM2RmYTU0Y2FlMDI3NjhjYzAzMDliY2Y0Y2ExY2VjYjA2OTVlOGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkNjE1NGNlYmQyZWJhODQyYWUzMmNiOTJlYzdkYzc2MGVkY2Q4MmUzYTZjODY0NDJjOGRlM2UwYWY0YjgxYjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bdca21c93538405fbaff5a59ef218f8d",
+      "statement": "Le service nsca ne démarre que si /opt/nagios/etc/nsca.cfg existe ; sinon il affiche un message et se termine.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/nsca/run#L1-L7",
+          "version": "repo-lines-v1:sha256:016d545566211a5484eb1bfee887a8e4c27024b0291d1419772a1e63566de06a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg3NWY5Mjg1NDZhZWU3ODU1Y2IxZGI5YWZjOGFiM2YxYThhMzRkNDNkZTViYmQ2MmY3MDc2ZDdiYTlmMzkxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRiZGM4NDgxMDk3MjJhMzgzZDBhOTcyYzZlYjg1OWYyYWJkMjk1NjViOGM0Y2M3MTk5ZTdjOWViNzA4ZjFiNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6e6cc29be5c644cd9aada5ce0109fd8f",
+      "statement": "Le service postfix réécrit relayhost, inet_protocols, myhostname et mydestination dans /etc/postfix/main.cf à chaque démarrage, puis lance postfix master au premier plan.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/postfix/run#L4-L19",
+          "version": "repo-lines-v1:sha256:324a267a6a25b78262cee5f46b458a4c45b662fbc4866c9b21e5f0b7635443bb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5Yzg0ZGQyMGQyZmEyMzg1ZjdkOTFiNmY0NjgzMmNjZTIwODFlNGY0YzU1N2Y3Zjc3MGM4NjZmNjQ5ZDViMDQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmZTMyMGFlM2Y2YjdhNzE4MzllZGUwMDJkZTdhZGYzNzBhMDcxZTA3NWYyMjc3OGE4NTVmNWMyYTdhMTZiOGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2NDFjMTI3YThlZDY1N2ZkM2RkNTJmMzhlN2I3NjkwYzgwOWZiNGRhNGFiYTA3NmZmN2QwYWNiZWVmNWFjMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f96057761baa427787b91b7d64c99afa",
+      "statement": "rsyslog renvoie tous les messages, sauf auth et authpriv, sur /dev/stdout, et Nagios journalise via syslog avec use_syslog=1.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/rsyslog.conf#L1-L7",
+          "version": "repo-lines-v1:sha256:9004a91e6a41a2836f8099b71453edcfbb288a102c939ddb04a6e461c0ce1365:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjQ1ZjY1NjA1ZTZhOGY0NjQ0MTJjMzI5ZTg0MzE1NGVjNjUwZjc4Y2VjZGU2OWQ1ZTQ1MTEwOTYyYjU0YTliNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY3ZGMzOTc5MDIxMWIzNGVkMmEwNGExYzI4OTYxODBmNTI2MWVjMDcwZmYzNzFmMzY2NjMwODRhYTVjNGZiMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://overlay/opt/nagios/etc/nagios.cfg#L253-L253",
+          "version": "repo-lines-v1:sha256:1b44c65d444ca56bacad757119e8cfb381770bb62be230890215a0ed01ee7e5a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0NGM2NWQ0NDRjYTU2YmFjYWQ3NTcxMTllOGNmYjM4MTc3MGJiNjJiZTIzMDg5MDIxNWEwZWQwMWVlN2U1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0NGM2NWQ0NDRjYTU2YmFjYWQ3NTcxMTllOGNmYjM4MTc3MGJiNjJiZTIzMDg5MDIxNWEwZWQwMWVlN2U1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzZkN2NhNjYyODRmODQyYzdkNjQ3ZTRiNTE3M2U5NTgxYWE1YzZkMTc3OGM2OGI4NGIwZGI2MjUwZDVlNjY3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}

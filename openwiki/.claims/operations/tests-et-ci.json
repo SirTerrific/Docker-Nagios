@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:22f9ed9dc43d0643677d03b047df1c6e3feebd1a4dc936d41bcf389404d1c654",
+  "claims": [
+    {
+      "id": "claim_8d774a1890c741ac86715762f450b4fb",
+      "statement": "smoke.sh envoie ses requêtes HTTP depuis un conteneur curl qui partage l'espace réseau du conteneur testé, sans publier de port.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L1-L17",
+          "version": "repo-lines-v1:sha256:3b7f17fa3a36ab37c40bf9293203079365dc4d4f8d0ba7bf72bd8e7e06fdcdc8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4NzVmOTI4NTQ2YWVlNzg1NWNiMWRiOWFmYzhhYjNmMWE4YTM0ZDQzZGU1YmJkNjJmNzA3NmQ3YmE5ZjM5MTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ZmIxOWM3Y2NkMWU5MGQxZWMyMTRkZjg2NjZmZWJlYjcyMTk2NzgzOGU3MTU0OWM4ZDhkZmUwNTdjZTgwYjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhZTk0YzMwOTVkOTY2MjJiN2EwZTFmNzA5MWE5MWQ1NjIzZjkzNzQ0NTY5NmExNTcxNDEyZTE1MWY5NTQ2M2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f89d8679f28241a9b86fdfea079dcfd9",
+      "statement": "smoke.sh vérifie la version de Nagios, l'absence d'erreur dans nagios -v et l'état run des services apache, nagios, nsca, postfix et rsyslog.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L26-L40",
+          "version": "repo-lines-v1:sha256:7ffcf8490eab487229280c8b32fb6aeb4b40d6b1e25da53572ba8975ff7bbcca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwYzQzMTg3N2M1MDE1NjcyMDAyYTFkYTczMzIxNzc1Y2EyZGVhZjQ1NGM3Y2Y3ZDU3Zjk4ODk1YjVmOTFjZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxMTdmYTAwNmJhOTIwODUwMGIyOTMwY2U2OWNiZGU0MzZjNjQ3YWZhOTE3Y2I3Mzk2YTliYzkxMTFhNDZkZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkNmI4Y2FhOGI3OTYyOGNmM2FkMGFiOGZhM2NjNzU2M2M1ZGNjMTAyMWJlYzg2NGNiMzBkMmRkNjkyMGVmODUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgyZWI5ZWRiY2M1YWFiMzk0ZDAyNDNkMzcxYWZjOTJmZWVmZjk5MWJkYmZlNzMyMmI5MzM0NzVkZmY3OTYwMDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b63fa03c81f340bbac7c242bfc548b53",
+      "statement": "smoke.sh attend un 401 sans authentification sur /nagios/ et un 200 avec authentification sur /nagios/, status.cgi, /nagios/nagiostv/ et show.cgi.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L42-L56",
+          "version": "repo-lines-v1:sha256:c9954bba0168f8a5303ced718700123139b6e63396ea44f1b2be26bbb8514ab4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyZTVmMzAyMWJjYTBmYmZhMzQ2YzkzYWNkZTc1ZTgwZTExNGJlYmQzMjBmOTAyMDhhOTcwZjU4ZjJiZmU4ZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0NDBlNTNjNmRmZWUwMjM3ZmM4ZmVjNDJhYzFiMWFjMDQwMGEwYzNkZDM0MzA2Zjk1NTZjYTMyNGY5YzVjOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlN2QyOWVlMDRjZGNmOGMwYjQ0ZTkwMDk5YzBlYTQ4NjMwMWMxNDk4NDRmZDRhYWE0ZDBiNDZmYjg5Y2NjNjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkM2YzNWJiZDgyYTU3Nzk5ODNiZDRkMmQwNjc5MmY0YzUwNWI0NWU0OGYwODA1ZDQ3MTVhMjQ3ODk0ZDFhZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4d15f0def0bb455bafe80f9faebf70c4",
+      "statement": "smoke.sh se termine avec un code non nul et affiche SOME TESTS FAILED si un contrôle échoue.",
+      "evidence": [
+        {
+          "resource": "repo://tests/smoke.sh#L97-L98",
+          "version": "repo-lines-v1:sha256:6b2de73af7ffe38c466af0733921e8d802840fc767571eced4d91fa086552a43:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzU3MzE4N2JiMWZlMzJiNjMxNGIyZTk4OTIyZThjNTMyOTBmMDA0MmJlNzBkMjUzNTI1M2FkMTdjODk4NzJhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzQwMzU5ZDljNDIxMTBmNGFlOWZhNTQ1NjdlZmM2ODBiZWRhMmI3M2UzYmI0NjZjODc1ZWJhM2YyZjFhNWEzOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNTc3NWQxOTYzYzZiYzUxMzA2OWJkNzAxYmEwMWQyY2UzNzIwMjdmOThjNGYyODMxMTU3MzM0MzdlODVlMTA5NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_6af10cbe147442e5b42c31388d63d1ed",
+      "statement": "Le workflow build-test se déclenche sur push, pull_request et workflow_dispatch, construit l'image, la démarre, puis lance smoke.sh avec la version extraite de ENV NAGIOS_BRANCH.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml",
+          "version": "repo-file-v1:sha256:14977b5b8ad90d639d2c6c0e86b15ac59ead1e2b1163442338081af18ec80cda"
+        }
+      ]
+    },
+    {
+      "id": "claim_97670a3e82ed419fb6cfe049d40b27e2",
+      "statement": "En cas d'échec, le workflow build-test affiche les journaux du conteneur et la fin de nagios.log ; il supprime toujours le conteneur et l'image.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml",
+          "version": "repo-file-v1:sha256:14977b5b8ad90d639d2c6c0e86b15ac59ead1e2b1163442338081af18ec80cda"
+        }
+      ]
+    },
+    {
+      "id": "claim_602805b11e714916b8911f590ca07f03",
+      "statement": ".travis.yml clone le dépôt upstream JasonRivers/Docker-Nagios et lance build.sh, qui construit et démarre l'image sans la tester.",
+      "evidence": [
+        {
+          "resource": "repo://.travis.yml",
+          "version": "repo-file-v1:sha256:7d2df35243151235a6d51bb14e53c092a073767c868e1718796188badf98421e"
+        },
+        {
+          "resource": "repo://build.sh",
+          "version": "repo-file-v1:sha256:9105d85f2b0069ead7944fac5fc0945e61fc387f1e4b372c0f7b1b88dad5e843"
+        }
+      ]
+    },
+    {
+      "id": "claim_77e56300ae6540449b42740f968833c9",
+      "statement": "Le workflow OpenWiki s'exécute chaque jour à 08:00 UTC, lance openwiki code --update avec le secret OPENAI_API_KEY et ouvre une pull request sur la branche openwiki/update.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml",
+          "version": "repo-file-v1:sha256:c31005f16763845e6dcd826d671cf11890a4c8e12498fd2b59428be80e3b585a"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-10-21T14:42:04.315Z"
+  }
+}

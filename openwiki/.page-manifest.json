@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/construction-image.md": {
+      "pageVersion": "sha256:4352e7363eb7500f4e31dbae6a0557b372b36b7ec21bbdc63fe9b2c817df6825",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/architecture/demarrage-et-supervision.md": {
+      "pageVersion": "sha256:735fa71a637255db09cc117e9f0c409533669f0ece5b34e3f6e796f691d760f3",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/configuration/configuration-nagios.md": {
+      "pageVersion": "sha256:168d3c4286c0ca59d2d35934b927dad7d78b9093034cae355881e5e2bba6f7c3",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/configuration/variables-et-volumes.md": {
+      "pageVersion": "sha256:bd5ca9d2872f7a1e7b6c12db12c9ad880eb8adba6f5780da6c3e1a3b74bf75ff",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/integrations/modules-complementaires.md": {
+      "pageVersion": "sha256:c3ff885e76ea33fe8b16885e4d121baf676da37e0bbe649f0f7f2d69b28c289f",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/operations/mise-a-jour-versions.md": {
+      "pageVersion": "sha256:47e091331f87845bbbaf16142f339b797305e86932bda09bcba2bc0125eee966",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/operations/tests-et-ci.md": {
+      "pageVersion": "sha256:22f9ed9dc43d0643677d03b047df1c6e3feebd1a4dc936d41bcf389404d1c654",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:8bfd4e270c7db9a21218a9e8045d2efe9be57726d0b3311728e18fcd07b55321",
+      "completedBy": "claude-code",
+      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e",
+      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
+      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61"
+    }
+  }
+}
