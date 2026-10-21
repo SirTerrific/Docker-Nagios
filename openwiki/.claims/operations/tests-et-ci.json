@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:22f9ed9dc43d0643677d03b047df1c6e3feebd1a4dc936d41bcf389404d1c654",
+  "pageVersion": "sha256:0392f9cd3b0fb570215b2d8ca4c2a3383fd0a650dc16861130a7c4ead570fd37",
   "claims": [
     {
       "id": "claim_8d774a1890c741ac86715762f450b4fb",
@@ -75,20 +75,10 @@
           "version": "repo-file-v1:sha256:9105d85f2b0069ead7944fac5fc0945e61fc387f1e4b372c0f7b1b88dad5e843"
         }
       ]
-    },
-    {
-      "id": "claim_77e56300ae6540449b42740f968833c9",
-      "statement": "Le workflow OpenWiki s'exécute chaque jour à 08:00 UTC, lance openwiki code --update avec le secret OPENAI_API_KEY et ouvre une pull request sur la branche openwiki/update.",
-      "evidence": [
-        {
-          "resource": "repo://.github/workflows/openwiki-update.yml",
-          "version": "repo-file-v1:sha256:c31005f16763845e6dcd826d671cf11890a4c8e12498fd2b59428be80e3b585a"
-        }
-      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-21T15:02:04.479Z"
   }
 }

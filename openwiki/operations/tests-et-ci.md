@@ -1,23 +1,21 @@
 ---
 type: testing
 title: Tests et intégration continue
-description: Test de fumée tests/smoke.sh, workflow GitHub Actions build-test, exécution locale avec act, scripts hérités Travis/build.sh, et workflow planifié OpenWiki.
+description: Test de fumée tests/smoke.sh, workflow GitHub Actions build-test, exécution locale avec act, et scripts hérités Travis/build.sh.
 tags: [testing, smoke-test, github-actions, act, ci]
 verified:
   - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
+    at: 2026-10-21T15:02:04.479Z
 sources:
   - id: openwiki-source-7a80b79a6fb3618cbfab08a2
     resource: repo://.github/workflows/build.yml
-  - id: openwiki-source-6d4b4e707b8d60b6ccfa3425
-    resource: repo://.github/workflows/openwiki-update.yml
   - id: openwiki-source-5733839de54e3cc774d6e83d
     resource: repo://.travis.yml
   - id: openwiki-source-8a2e26d4137b8250f68bb869
     resource: repo://build.sh
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+generated: { by: "claude-code", at: "2026-10-21T15:02:04.479Z" }
 ---
 
 # Tests et intégration continue
@@ -70,9 +68,5 @@ act a besoin d'un accès au démon Docker de l'hôte. Le test de fumée passe pa
 - `build.sh` construit l'image `nagios` et la démarre sur le port 8080, sans aucune vérification.
 
 Ces deux fichiers sont exclus du contexte Docker par `.dockerignore`.
-
-## Workflow OpenWiki
-
-`.github/workflows/openwiki-update.yml` lance chaque jour à 08:00 UTC (ou à la demande) la commande `openwiki code --update`. Le résultat est proposé dans une pull request sur la branche `openwiki/update`. Ce workflow a besoin du secret `OPENAI_API_KEY`, ainsi que des secrets LangSmith s'ils sont utilisés. Sans ces secrets, l'exécution échoue. Il ne fait pas partie des tests de l'image.
 
 Voir aussi [Mise à jour des versions](mise-a-jour-versions.md) pour le test de migration sur des volumes existants.
