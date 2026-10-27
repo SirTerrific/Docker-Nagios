@@ -14,15 +14,15 @@ sources:
     resource: repo://SECURITY.md
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T18:14:48.411Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
 verified:
   - by: openwiki/0.7.2
-    at: 2026-10-27T18:14:48.411Z
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Démarrage rapide
 
-Ce dépôt produit une **image Docker de Nagios Core** sur Ubuntu 24.04. L'image contient Nagios Plugins, nagiosgraph, NagiosTV, les clients NRPE et NCPA, le démon NSCA, postfix pour les notifications par mail, et plusieurs collections de plugins tiers. C'est un fork de `JasonRivers/Docker-Nagios`, prévu pour remplacer l'image `jasonrivers/nagios` sur les mêmes volumes.
+Ce dépôt produit une **image Docker de Nagios Core** sur Ubuntu 24.04. L'image contient Nagios Plugins, nagiosgraph, NagiosTV, les clients NRPE et NCPA, le démon NSCA, postfix pour les notifications par mail, et plusieurs collections de plugins tiers, tous figés sur un commit précis. C'est un fork de `JasonRivers/Docker-Nagios`, prévu pour remplacer l'image `jasonrivers/nagios` sur les mêmes volumes.
 
 ## Organisation du dépôt
 
@@ -31,7 +31,7 @@ Ce dépôt produit une **image Docker de Nagios Core** sur Ubuntu 24.04. L'image
 | `Dockerfile` | Toute la construction de l'image et les versions des composants |
 | `overlay/` | Fichiers copiés tels quels à la racine de l'image : scripts runit, `start_nagios`, configuration Nagios d'exemple, correctif nagiosgraph |
 | `tests/smoke.sh` | Test de fumée d'un conteneur en cours d'exécution |
-| `.github/workflows/build.yml` | CI : build, test de fumée, puis publication de l'image sur ghcr.io sur `master` |
+| `.github/workflows/build.yml` | CI : build, test de fumée, test de migration, puis publication de l'image sur ghcr.io sur `master` |
 | `.github/dependabot.yml` | Mises à jour hebdomadaires de l'image de base et des actions GitHub |
 | `SECURITY.md` | Politique de sécurité : versions supportées et signalement privé des vulnérabilités |
 | `docker-compose.yml` | Exemple d'utilisation avec des volumes nommés |
@@ -47,7 +47,7 @@ bash tests/smoke.sh nagios
 
 L'interface est servie sur `http://localhost:8080/nagios/` (identifiants par défaut `nagiosadmin` / `nagios`). NagiosTV est sous `/nagios/nagiostv/`, et les graphes sous `/cgi-bin/show.cgi`.
 
-L'image est publiée sur `ghcr.io/sirterrific/docker-nagios`, avec les tags `latest` et la version de Nagios Core (par exemple `4.5.14`). La publication a lieu à chaque push sur `master`, après réussite du test de fumée.
+L'image est publiée sur `ghcr.io/sirterrific/docker-nagios`, avec les tags `latest` et la version de Nagios Core (par exemple `4.5.14`). La publication a lieu à chaque push sur `master`, après réussite du test de fumée et du test de migration.
 
 ## Quelle page lire ?
 

@@ -3,12 +3,7 @@ type: architecture
 title: Démarrage et supervision runit
 description: Rôle de start_nagios comme PID 1 (amorçage des volumes vides, création du compte web, lancement et arrêt de runsvdir) et comportement de chaque service runit — apache, nagios, nsca, postfix, rsyslog.
 tags: [runit, entrypoint, startup, shutdown, services]
-verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
 sources:
-  - id: openwiki-source-bb1ebe868e35e9e500714501
-    resource: repo://Dockerfile
   - id: openwiki-source-af761033c7412d41b42b0af1
     resource: repo://overlay/etc/rsyslog.conf
   - id: openwiki-source-7ffc6401f752d4262a7cca07
@@ -23,7 +18,10 @@ sources:
     resource: repo://overlay/opt/nagios/etc/nagios.cfg
   - id: openwiki-source-b41c1cb9f9c6db7b0c389a2a
     resource: repo://overlay/usr/local/bin/start_nagios
-generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+verified:
+  - by: openwiki/0.7.2
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Démarrage et supervision runit
@@ -41,16 +39,17 @@ Le conteneur exécute `/usr/local/bin/start_nagios`, qui devient le PID 1. Le sc
 À la réception de `SIGTERM`, `SIGHUP` ou `SIGINT`, la fonction `shutdown` :
 
 1. exécute `sv force-stop` sur chaque service, en parallèle avec GNU `parallel` ;
-2. envoie `HUP` à `runsvdir` et attend sa fin ;
-3. après une seconde, envoie `kill` à chaque processus orphelin restant, puis `kill -9` si le processus n'est pas terminé au bout de 5 s.
+2. envoie `HUP` à `runsvdir` et attend sa fin, puis se termine. Il n'y a plus de nettoyage des processus orphelins.
+
+Au démarrage, si `NAGIOSADMIN_PASS` vaut encore `nagios`, `start_nagios` écrit un avertissement sur la sortie d'erreur.
 
 ## Services runit
 
 | Service | Script | Comportement |
 |---|---|---|
 | apache | `/etc/sv/apache/run` | Charge `/etc/apache2/envvars` et `/etc/default/apache-htcacheclean`, exporte `TZ=$NAGIOS_TIMEZONE`, puis lance `apache2 -D NO_DETACH` au premier plan. |
-| nagios | `/etc/sv/nagios/run` | Fait un `chown` vers `nagios` de tout ce qui, sous `/opt/nagiosgraph`, n'appartient pas à `nagios`. Si `ngshared.pm` manque, tente de relancer l'installateur nagiosgraph depuis `/tmp/nagiosgraph`. Lance ensuite `/opt/nagios/bin/nagios /opt/nagios/etc/nagios.cfg`. |
-| nsca | `/etc/sv/nsca/run` | Si `/opt/nagios/etc/nsca.cfg` existe, lance `nsca -f -c … --single` au premier plan. Sinon, affiche « nsca configuration not found; skipping. » et se termine. |
+| nagios | `/etc/sv/nagios/run` | Fait un `chown` vers `nagios` de tout ce qui, sous `/opt/nagiosgraph`, n'appartient pas à `nagios`. Lance ensuite `/opt/nagios/bin/nagios /opt/nagios/etc/nagios.cfg`. |
+| nsca | `/etc/sv/nsca/run` | Si `/opt/nagios/etc/nsca.cfg` existe, lance `nsca -f -c … --single` au premier plan. Sinon, affiche « nsca configuration not found; skipping. » puis reste en veille (`sleep infinity`). |
 | postfix | `/etc/sv/postfix/run` | Réécrit `main.cf` à chaque démarrage (`relayhost`, `inet_protocols`, `myhostname`, `mydestination`, suppression de `myorigin`), écrit `/etc/mailname`, copie `resolv.conf` dans le chroot postfix, puis lance `master -d`. |
 | rsyslog | `/etc/sv/rsyslog/run` | Lance `rsyslogd -n` avec `/etc/rsyslog.conf`. |
 
@@ -60,7 +59,6 @@ Le conteneur exécute `/usr/local/bin/start_nagios`, qui devient le PID 1. Le sc
 
 ## Pièges connus
 
-- **Branche morte de nagiosgraph.** Le build supprime `/tmp/nagiosgraph`, donc la réinstallation dans `nagios/run` échouerait si `ngshared.pm` manquait. En pratique, le fichier est fourni par l'amorçage depuis `/orig/graph-etc`. Ce n'est un problème que si le volume `nagiosgraph/etc` est non vide mais incomplet.
-- **Boucle de redémarrage de nsca.** Sans `nsca.cfg`, le script se termine immédiatement et runit le relance en boucle. C'est sans gravité mais bruyant. Cela arrive avec un volume `etc` ancien qui n'a jamais contenu `nsca.cfg`.
+- **nsca sans configuration.** Sans `nsca.cfg`, le service reste en veille au lieu de se terminer, donc runit ne le relance pas en boucle.
 - **Bit exécutable.** Un script `run` sans bit exécutable fait échouer runit avec `unable to start ./run: access denied`. C'est pourquoi le Dockerfile fait un `chmod +x` explicite sur chaque script, `nsca` compris.
 - **Modifications de postfix non persistantes.** `main.cf` n'est pas dans un volume et il est réécrit au démarrage. La configuration postfix passe par les variables décrites dans [Variables et volumes](../configuration/variables-et-volumes.md).

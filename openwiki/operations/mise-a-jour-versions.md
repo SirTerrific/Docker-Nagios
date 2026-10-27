@@ -3,9 +3,6 @@ type: runbook
 title: Mise à jour des versions
 description: Procédure pour monter les versions de Nagios Core et de ses composants dans le Dockerfile sans casser les installations existantes, avec les points de contrôle et les particularités de Nagios 4.5.13/4.5.14.
 tags: [upgrade, versions, compatibility, nagios-core, runbook]
-verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T18:14:48.411Z
 sources:
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
@@ -13,9 +10,14 @@ sources:
     resource: repo://overlay/usr/local/bin/start_nagios
   - id: openwiki-source-23775c3de52f3ab95a13cb8b
     resource: repo://README.md
+  - id: openwiki-source-80183875d301dfa560d2b7e4
+    resource: repo://tests/migrate.sh
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T18:14:48.411Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+verified:
+  - by: openwiki/0.7.2
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Mise à jour des versions
@@ -43,11 +45,15 @@ Le tableau des versions du `README.md` indique Nagios Core 4.5.14, comme le Dock
 2. **Modifier les `ENV`** concernées dans le `Dockerfile` (et le tableau du `README.md`).
 3. **Construire l'image** : `docker build -t nagios-fork:<version> .`.
 4. **Lancer le test de fumée** sur un conteneur neuf : `bash tests/smoke.sh <conteneur> <version>`. Le workflow CI fait la même chose (voir [Tests et CI](tests-et-ci.md)).
-5. **Tester la migration** : démarrer d'abord `jasonrivers/nagios:latest` sur des volumes, le laisser créer son état, puis relancer la nouvelle image sur **les mêmes volumes**. Vérifier ensuite que :
+5. **Tester la migration** : `bash tests/migrate.sh <image> [ancienne-image]`. Le script démarre `jasonrivers/nagios:latest` (ou l'ancienne image donnée) sur des volumes neufs, ajoute un marqueur dans `contacts.cfg`, l'arrête, puis démarre la nouvelle image sur **les mêmes volumes**, lance `tests/smoke.sh` et vérifie que le marqueur est toujours là. Les points contrôlés sont :
    - `nagios -v` ne signale aucune erreur sur la configuration existante ;
    - `retention.dat` est relu (commentaires et acquittements toujours présents) ;
    - les fichiers des volumes appartiennent toujours à `nagios` et restent écrivables ;
    - les cinq services runit sont en état `run`.
+
+## Rafraîchir les dépôts tiers figés
+
+qstat, nagiosgraph et les six collections de plugins sont figés sur un SHA dans le `Dockerfile` (`git -C <dossier> checkout <sha>`). Pour les mettre à jour : relever le dernier commit avec `git ls-remote <url> HEAD`, remplacer le SHA, puis refaire le build, le test de fumée et le test de migration.
 
 ## Règles pour ne pas casser les installations existantes
 

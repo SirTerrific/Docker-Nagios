@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:007839ff827fa9f614f1a4766c37b1631128da4cdc5c0e6f0075a8246bb56816",
+  "pageVersion": "sha256:dca64f0d6afb0df91d8e98863ece284cb9b074094a9ac2f6bccd171aa30ee2c0",
   "claims": [
     {
       "id": "claim_51e4dd4d49e344c3bc8554673abdd52b",
@@ -18,7 +18,7 @@
       "evidence": [
         {
           "resource": "repo://Dockerfile",
-          "version": "repo-file-v1:sha256:b138faeefc9573b300895e32ebcb8683dd33981a8dd1a8a6578eacd291f3429d"
+          "version": "repo-file-v1:sha256:5cc98e3669a7e554614b6af3c5c179571240c8e286992f514a0bfd018e39ae30"
         },
         {
           "resource": "repo://README.md#L9-L16",
@@ -55,10 +55,34 @@
           "version": "repo-lines-v1:sha256:d724a1d9b328198543cee8c38d2ca19af84d8ae9c6792fd816ea9a3c5e09ebff:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAzZTkwZTQ2OTY3NWQ5MzM2ZWMwMDUxOTc1YTEyYzM2NDlmZTExN2Q1ODllNWY3ODYzNTU3ZDI1ZjUwN2E3MTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0MDM1OWQ5YzQyMTEwZjRhZTlmYTU0NTY3ZWZjNjgwYmVkYTJiNzNlM2JiNDY2Yzg3NWViYTNmMmYxYTVhMzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjNDgzNmIzMzNhMjc0Yzc5ODdiN2U4OTliMjM0MDk1ZWRjNjQyNGViMjUwN2YzZWU2MzhmMjViM2U2MDU2OWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_9803c3eec0724aa0a1f963a0761fe23c",
+      "statement": "tests/migrate.sh démarre l'ancienne image (par défaut jasonrivers/nagios:latest) sur des volumes neufs, ajoute un marqueur dans contacts.cfg, l'arrête, puis démarre la nouvelle image sur les mêmes volumes, lance smoke.sh et vérifie le marqueur.",
+      "evidence": [
+        {
+          "resource": "repo://tests/migrate.sh",
+          "version": "repo-file-v1:sha256:67a114be17fd9db257b49634db79f1a8fc4856ed338a02716eb5db21c616a01d"
+        }
+      ]
+    },
+    {
+      "id": "claim_67d6056618874382b7d6ba5c6b403424",
+      "statement": "Les dépôts tiers figés se mettent à jour en changeant le SHA passé à git checkout dans le Dockerfile.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L104-L105",
+          "version": "repo-lines-v1:sha256:02488ff0ffa1b6b621eba3fc3a824f0ceac74bcd8ea0690b1ca5616902fc56b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGYxNjI1MzJmNjBmNTdhY2ExYTVjZjhjMzczNzk4M2I3NDYyYzc0YTAyMzQxODQ2MzFiOTBkM2Y3ZjAxNjk3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU2OWY1ZDBkMjZmOGQ1M2YyOThhMmI0NjlhOWZhYWJmNWMzOGM5NDk2MDYxMGExZDAzNTdmNjU3ZjdkODFhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjMzYTFjNDkwMTgyODk5NjA3ZWZjZDgwMGEyMmY0YWQ3Y2RlMDc1NmJiZGM3MWQ4MTk4NTFmNzBlNzc0NGJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQ0MDBmMDE5MDU3NDI0NjI3NmFhNzIwNmUwMjczODdmNTA1NzkxNjRlMDQwNWI1ZjJiZmU5OGZkOTY3MTI2MiJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L198-L203",
+          "version": "repo-lines-v1:sha256:3da8a3020f7f1cda69480ee0a8acec2cbda79cb0eac5ff34b7d857ca603ee959:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjMGIyOGQ5ZmQ2YjQ5OWQ5NzFjZWE2YTM2MTQ5NmQ1NDRkZDcxMjY1ZjBjZTI5Yzk2MzE1NDY2Y2JiOWUyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkNWJhNjljMDdiMjk5M2VmNGJhNDFhMWJlYjE1MzAzMmNjNGU3ZTU5ODBlMzIxYjk5NDA4ZjI5NDYzMDE4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDQwMmQ4ZWRlNDlhZWMxZGRlZTgwY2NhYzA4ZGFkZTA2ZDg2ZTg3MDYzZDg2NTRhY2Y3YTdkMzBiMjE0NzY4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTA4ODNlMDE2YjljMWM1NTU4NDJhNTU4YTg3ZjgwY2M4Y2YwNzI0OGZkNDhmZWY4OWJhYTEwN2M1OTczZTFjMCJ9"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-27T18:14:48.411Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

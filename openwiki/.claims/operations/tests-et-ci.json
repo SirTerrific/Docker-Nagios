@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:3b7e6c43066791128dfa1a39add5748a411c53d08cd00eada79f7c7b289e5519",
+  "pageVersion": "sha256:b239ab1cb2756905aa5ea1f3188abb6b6e5e219a06d107f0ff551f72625bd782",
   "claims": [
     {
       "id": "claim_8d774a1890c741ac86715762f450b4fb",
@@ -44,11 +44,15 @@
     },
     {
       "id": "claim_6af10cbe147442e5b42c31388d63d1ed",
-      "statement": "Le workflow build-test se déclenche sur push, pull_request et workflow_dispatch, construit l'image, la démarre, puis lance smoke.sh avec la version extraite de ENV NAGIOS_BRANCH.",
+      "statement": "Le workflow build-test se déclenche sur push, pull_request et workflow_dispatch, construit l'image, la démarre, lance smoke.sh avec la version extraite de ENV NAGIOS_BRANCH, puis lance tests/migrate.sh sur l'image construite.",
       "evidence": [
         {
           "resource": "repo://.github/workflows/build.yml",
-          "version": "repo-file-v1:sha256:050a125e1a45ee9c4f913c76951ba4c9039883f369e87af0fc934de166de7eab"
+          "version": "repo-file-v1:sha256:47f87b7c4df20e89c6d61322fc7efdf8a598f3523e5d4975733ad31e2e95a48a"
+        },
+        {
+          "resource": "repo://tests/migrate.sh",
+          "version": "repo-file-v1:sha256:67a114be17fd9db257b49634db79f1a8fc4856ed338a02716eb5db21c616a01d"
         }
       ]
     },
@@ -58,21 +62,7 @@
       "evidence": [
         {
           "resource": "repo://.github/workflows/build.yml",
-          "version": "repo-file-v1:sha256:050a125e1a45ee9c4f913c76951ba4c9039883f369e87af0fc934de166de7eab"
-        }
-      ]
-    },
-    {
-      "id": "claim_602805b11e714916b8911f590ca07f03",
-      "statement": ".travis.yml clone le dépôt upstream JasonRivers/Docker-Nagios et lance build.sh, qui construit et démarre l'image sans la tester.",
-      "evidence": [
-        {
-          "resource": "repo://.travis.yml",
-          "version": "repo-file-v1:sha256:7d2df35243151235a6d51bb14e53c092a073767c868e1718796188badf98421e"
-        },
-        {
-          "resource": "repo://build.sh",
-          "version": "repo-file-v1:sha256:9105d85f2b0069ead7944fac5fc0945e61fc387f1e4b372c0f7b1b88dad5e843"
+          "version": "repo-file-v1:sha256:47f87b7c4df20e89c6d61322fc7efdf8a598f3523e5d4975733ad31e2e95a48a"
         }
       ]
     },
@@ -91,7 +81,7 @@
       "statement": "Le job publish dépend de build-test et ne s'exécute que sur un push vers refs/heads/master, avec les permissions contents: read et packages: write.",
       "evidence": [
         {
-          "resource": "repo://.github/workflows/build.yml#L40-L46",
+          "resource": "repo://.github/workflows/build.yml#L43-L49",
           "version": "repo-lines-v1:sha256:abd4aee98ff19e3210ff9aeab6f8a1381e77becb30dbd4e218d801408b4e4f7e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgyNTRjOTE2YTQ0ODEyM2UyZDNkOTVlYmFhMmU0YjFkYjBmYTdiNTQzZTEyYzNlMWIxMWNmMzYyMTZmMjAwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2U2ODlhYTlmODNjNTRlOTFiMDRiNDVhOWY1NWQxOGIxM2Y0ZmZlYWQzMDc0YmJlZTMzMWMzNmQ0ZDE1MTYyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2NiNzVkNjJiN2NkZjkyOTAxZDIzMDYzYmZmNDE2MWYzZmVmYzYzNzRhYzVlYTI2YWFkMDk2Y2Q0MjNkZDcxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDg2NmNhY2VmYWMzMmJjOGMzOTcyM2E4YjZmZDRhMzQzMzcwZDhlZmQ0MDNkYTU3ZTFkYWExYzM5N2E2ZDUyZSJ9"
         }
       ]
@@ -101,7 +91,7 @@
       "statement": "Le job publish se connecte à ghcr.io, construit l'image avec les tags latest et la version extraite de ENV NAGIOS_BRANCH, puis pousse les deux tags.",
       "evidence": [
         {
-          "resource": "repo://.github/workflows/build.yml#L50-L59",
+          "resource": "repo://.github/workflows/build.yml#L53-L62",
           "version": "repo-lines-v1:sha256:8d68ed491a72bc260498e1427769d237892ad28499eb8439e70da833ea63a4a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMGQ3ODI5OWEwNTBkMTdkYWUyOTA0NDhkOGY4NTMzMmY1NDMwMmIwMWJjM2Y4MjgzNjNkY2NkMzczNTVlY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YTMwYmU1ZTFlMTllNmVlODFlZDY5ZDE3MzIxMTA4Mzk1YmYyMTNlZTU5M2E0ODgyNGQwMzA4ZjEwOWRmNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4NjZjYWNlZmFjMzJiYzhjMzk3MjNhOGI2ZmQ0YTM0MzM3MGQ4ZWZkNDAzZGE1N2UxZGFhMWMzOTdhNmQ1MmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
@@ -129,6 +119,6 @@
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-27T18:14:48.411Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

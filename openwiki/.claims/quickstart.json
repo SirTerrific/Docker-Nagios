@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:74d83bf09538b256fb12c6255d217dac1b8ec548681c159e0d80cb93106e8d7a",
+  "pageVersion": "sha256:d69b719e6cb9a38ad3231c52966602c045b3bc362dbd104a0ffb19f2472c893a",
   "claims": [
     {
       "id": "claim_3d8eb2cbc20748f9bbfa11ebeca3295d",
@@ -12,7 +12,7 @@
         },
         {
           "resource": "repo://Dockerfile#L133-L221",
-          "version": "repo-lines-v1:sha256:c15dc3ab68f826b4dc192091d1fccaed11c7c90805996db24b5172addf1062e3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0NDhkY2QxZTM0MjU0YmJiODUyMWRmOGI4NTBmMjg2ZTAxOTkzM2M1YzYxZjQ2MWEyYjRhNjA0MWVjNzNiM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZjJjNDkzN2Y4MWI5MjNhNWYyNmQ2Yzc1YzQyYmU5YzY0NGFlOGMxYzM1NGExNjZkMDgxY2IzMGJhNTRjMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyZThhNGNmZGE2NTU2Yjk2MGU1OWYwNjY4YmNmNDdkMTExMDE1MWNlODI4NDBiMGY4OWY1OWQ1NTJlMWFiMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiZTY0ZjM3Y2JhMTFkOGJiMTFhYmE0YTkyY2ZiMjA3MTg3YTcwZjVhMzZkN2JiNjZlOGRmNDYwNDYwNWQ5NTIifQ"
+          "version": "repo-lines-v1:sha256:f2a3cbabad1066a51a4733df7cbfe79a73a6f47cddcabe7a77f01892e89650ca:eyJzZWxlY3RlZExpbmVDb3VudCI6ODksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ0NDhkY2QxZTM0MjU0YmJiODUyMWRmOGI4NTBmMjg2ZTAxOTkzM2M1YzYxZjQ2MWEyYjRhNjA0MWVjNzNiM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1ZjJjNDkzN2Y4MWI5MjNhNWYyNmQ2Yzc1YzQyYmU5YzY0NGFlOGMxYzM1NGExNjZkMDgxY2IzMGJhNTRjMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyZThhNGNmZGE2NTU2Yjk2MGU1OWYwNjY4YmNmNDdkMTExMDE1MWNlODI4NDBiMGY4OWY1OWQ1NTJlMWFiMTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJiZTY0ZjM3Y2JhMTFkOGJiMTFhYmE0YTkyY2ZiMjA3MTg3YTcwZjVhMzZkN2JiNjZlOGRmNDYwNDYwNWQ5NTIifQ"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "statement": "L'image est publiée sur ghcr.io sous le nom du dépôt en minuscules, avec les tags latest et la version de Nagios Core, à chaque push sur master après réussite de build-test.",
       "evidence": [
         {
-          "resource": "repo://.github/workflows/build.yml#L40-L59",
+          "resource": "repo://.github/workflows/build.yml#L43-L62",
           "version": "repo-lines-v1:sha256:1ca1f11a13f93205f962c5b8fe61e14de5704499caf9bda7ccea0e8d9915a582:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjU0YzkxNmE0NDgxMjNlMmQzZDk1ZWJhYTJlNGIxZGIwZmE3YjU0M2UxMmMzZTFiMTFjZjM2MjE2ZjIwMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YTMwYmU1ZTFlMTllNmVlODFlZDY5ZDE3MzIxMTA4Mzk1YmYyMTNlZTU5M2E0ODgyNGQwMzA4ZjEwOWRmNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjYjc1ZDYyYjdjZGY5MjkwMWQyMzA2M2JmZjQxNjFmM2ZlZmM2Mzc0YWM1ZWEyNmFhZDA5NmNkNDIzZGQ3MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
         }
       ]
@@ -59,10 +59,20 @@
           "version": "repo-file-v1:sha256:96ccc0bc03937d862d277fa69a06d409a7a0d33750dc684fd3e3429eecd146c6"
         }
       ]
+    },
+    {
+      "id": "claim_3e2be7f755524568a234604b45ae047b",
+      "statement": "Le workflow CI construit l'image, lance le test de fumée et le test de migration, puis publie sur ghcr.io depuis master.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml",
+          "version": "repo-file-v1:sha256:47f87b7c4df20e89c6d61322fc7efdf8a598f3523e5d4975733ad31e2e95a48a"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-27T18:14:48.411Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

@@ -1,17 +1,7 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:c3ff885e76ea33fe8b16885e4d121baf676da37e0bbe649f0f7f2d69b28c289f",
+  "pageVersion": "sha256:b7122434bb6ad5c20cde63b79ffc591381b41730180e4f6e75b091c5b4ce1b18",
   "claims": [
-    {
-      "id": "claim_3f332a59b57844c89a8ce3497736f15a",
-      "statement": "nagiosgraph est cloné sans version fixée depuis SourceForge et installé dans /opt/nagiosgraph, avec /opt/nagios/var/perfdata.log comme fichier perfdata et /cgi-bin comme URL des CGI.",
-      "evidence": [
-        {
-          "resource": "repo://Dockerfile#L183-L194",
-          "version": "repo-lines-v1:sha256:e430cc187350bcf503ab6bc8b3064f235c9330e342c529ce16a8b96da40b8703:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0MzA1YTc5NzlkZDQyNTM1NDU1NmY0ZjlkZGNkMWIzMjUxNzVjYjY3Y2ZhMmMxZTI1MTMzMWZlZmEyNTMyZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNTRhMWNiYzk2ZDU4YjA0OGY4OTdkN2RmMzRmNDUwNGQzM2VhZDI1NGQyZGQ3MmNiMDA4OWFjY2QxYzczMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNWEyOTMxMmEwNzRjODM4YTE3NTE2MGQ3MDljMjY0OTgzMDJhMjY4NDI2OWZmYTMwMjQ1ZmY2ZDI4ODQ2NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0MDJkOGVkZTQ5YWVjMWRkZWU4MGNjYWMwOGRhZGUwNmQ4NmU4NzA2M2Q4NjU0YWNmN2E3ZDMwYjIxNDc2ODkifQ"
-        }
-      ]
-    },
     {
       "id": "claim_09fe8035a750428a8740bc485eaf475a",
       "statement": "Les variables NG_CGI_DIR, NG_WWW_DIR et NG_CGI_URL placent les CGI de nagiosgraph dans /opt/nagios/sbin et ses fichiers web dans /opt/nagios/share/nagiosgraph.",
@@ -82,7 +72,7 @@
       "evidence": [
         {
           "resource": "repo://Dockerfile#L196-L216",
-          "version": "repo-lines-v1:sha256:276a17b8087bbffdc9d4f96e50a45296c4bf0b1bcd36fcec949fd6a0a0ab9fa4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjY2MyMTAwZmM5MjQwYzRhODY2OTc4MTZiZGFmYjJiNDUwNWIzZDQ2YmIxMzQ2NTUxMzBhN2Q0Njc5ZDAyNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwOWMwODgyZGQ3NTMzZDk4NjlhNDVkNTRkYTRjZWM4ZDdlNGMxMjg5NTMzYjE5YTFlN2U4OGRiNjA1OWNkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViODMxNTBjOTJmOGYyN2JiNTE5ZTJmMTEyMzI1MGFmZWEzODFiOGFhYmQ1YWQ1ZGU3NmZlOGRhNWMxM2E4ZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2MzNmZTg5YmNjOTllMzM3YmU4NTc5Y2QwOWE4ZjI0MjNhN2JkYmEzNjI2ZTY2ZjE5NWViNThjYzUwNjJlNjQifQ"
+          "version": "repo-lines-v1:sha256:cd9d03d505ec9dc613e077480559749c4ec526b7cf764ae6a1cca525ce4d8900:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjY2MyMTAwZmM5MjQwYzRhODY2OTc4MTZiZGFmYjJiNDUwNWIzZDQ2YmIxMzQ2NTUxMzBhN2Q0Njc5ZDAyNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwOWMwODgyZGQ3NTMzZDk4NjlhNDVkNTRkYTRjZWM4ZDdlNGMxMjg5NTMzYjE5YTFlN2U4OGRiNjA1OWNkMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImViODMxNTBjOTJmOGYyN2JiNTE5ZTJmMTEyMzI1MGFmZWEzODFiOGFhYmQ1YWQ1ZGU3NmZlOGRhNWMxM2E4ZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2MzNmZTg5YmNjOTllMzM3YmU4NTc5Y2QwOWE4ZjI0MjNhN2JkYmEzNjI2ZTY2ZjE5NWViNThjYzUwNjJlNjQifQ"
         }
       ]
     },
@@ -92,17 +82,37 @@
       "evidence": [
         {
           "resource": "repo://Dockerfile",
-          "version": "repo-file-v1:sha256:b138faeefc9573b300895e32ebcb8683dd33981a8dd1a8a6578eacd291f3429d"
+          "version": "repo-file-v1:sha256:5cc98e3669a7e554614b6af3c5c179571240c8e286992f514a0bfd018e39ae30"
         },
         {
           "resource": "repo://patches/nagios-plugins-2.4.0_check_ifstatus.patch",
           "version": "repo-file-v1:sha256:841d00c215e4462d568ea9f694996227a31eca86759b921025aceb78d1982e50"
         }
       ]
+    },
+    {
+      "id": "claim_a17319b7f50845b184467683dc682b3f",
+      "statement": "nagiosgraph est cloné depuis SourceForge et figé sur un commit précis, puis installé dans /opt/nagiosgraph avec /opt/nagios/var/perfdata.log comme fichier perfdata et /cgi-bin comme URL des CGI.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L183-L195",
+          "version": "repo-lines-v1:sha256:fcc2d39d890e6b33a6421e07dde2f2c15fb9da9f3ffb89c5828d3c47c19ff605:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0MzA1YTc5NzlkZDQyNTM1NDU1NmY0ZjlkZGNkMWIzMjUxNzVjYjY3Y2ZhMmMxZTI1MTMzMWZlZmEyNTMyZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNWEyOTMxMmEwNzRjODM4YTE3NTE2MGQ3MDljMjY0OTgzMDJhMjY4NDI2OWZmYTMwMjQ1ZmY2ZDI4ODQ2NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgzOTA4NTUxMTQ1ZDc3ODJjYzZlMTRmYTI1YTc0MmVkMWMxYzY1OGYzN2QxOWJiYmQ4ODkyOTJjNzU2NjJhYTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_174c2443fe35482b89f086e84f74995b",
+      "statement": "Les collections de plugins tierces (WL, JR, JE, mssql, mqtt, DF) sont chacune figées sur un commit précis par git checkout.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L197-L203",
+          "version": "repo-lines-v1:sha256:38518e2f3ffd500bc2a11ad7c091072bbc8bae867b1cbaba6a08b2b138796f26:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDAzZTE5YjA4MWZjNmZjYWNkMGZkMTg3MzM1M2I5M2E4OTU1MTdiMjkxNTljNDRkZGNkOGM2Y2MxZWYzZWY5MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkNWJhNjljMDdiMjk5M2VmNGJhNDFhMWJlYjE1MzAzMmNjNGU3ZTU5ODBlMzIxYjk5NDA4ZjI5NDYzMDE4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmQ5MDdmYWU3ZDgzZjIzYzE2OGY4ZDZlNjk1NGU5MzllMjliYTE5MmNiNzUyODA1M2Y0MjZjOGMyNjIzMGU0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTA4ODNlMDE2YjljMWM1NTU4NDJhNTU4YTg3ZjgwY2M4Y2YwNzI0OGZkNDhmZWY4OWJhYTEwN2M1OTczZTFjMCJ9"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

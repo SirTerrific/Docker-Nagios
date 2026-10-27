@@ -3,9 +3,6 @@ type: configuration
 title: Variables d'environnement et volumes
 description: Variables d'environnement prises en compte au build ou à l'exécution, volumes persistants, exemple docker-compose, identifiants par défaut, et contraintes pour réutiliser les volumes d'une installation jasonrivers/nagios existante.
 tags: [environment, volumes, docker-compose, persistence, compatibility]
-verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
 sources:
   - id: openwiki-source-b79fbbd921df689b4bbdc82f
     resource: repo://docker-compose.yml
@@ -15,9 +12,14 @@ sources:
     resource: repo://overlay/etc/sv/apache/run
   - id: openwiki-source-77b22575a9ddd667291f241e
     resource: repo://overlay/etc/sv/postfix/run
+  - id: openwiki-source-b41c1cb9f9c6db7b0c389a2a
+    resource: repo://overlay/usr/local/bin/start_nagios
   - id: openwiki-source-23775c3de52f3ab95a13cb8b
     resource: repo://README.md
-generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+verified:
+  - by: openwiki/0.7.2
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Variables d'environnement et volumes
@@ -28,7 +30,7 @@ Toutes les variables sont déclarées par `ENV` dans le `Dockerfile`. Pour savoi
 
 | Variable | Défaut | Lue | Effet |
 |---|---|---|---|
-| `NAGIOSADMIN_USER` / `NAGIOSADMIN_PASS` | `nagiosadmin` / `nagios` | au démarrage | Crée `htpasswd.users` **seulement s'il n'existe pas**. Les droits CGI restent accordés à `nagiosadmin` dans `cgi.cfg`. |
+| `NAGIOSADMIN_USER` / `NAGIOSADMIN_PASS` | `nagiosadmin` / `nagios` | au démarrage | Crée `htpasswd.users` **seulement s'il n'existe pas**. Un avertissement est écrit sur stderr si le mot de passe vaut encore `nagios`. Les droits CGI restent accordés à `nagiosadmin` dans `cgi.cfg`. |
 | `MAIL_RELAY_HOST` | vide | au démarrage (postfix) | Définit `relayhost` dans `main.cf`. |
 | `MAIL_INET_PROTOCOLS` | vide | au démarrage (postfix) | Définit `inet_protocols`. |
 | `NAGIOS_FQDN` | `nagios.example.com` | build **et** démarrage | Au build : `mailname` de postfix et `ServerName` d'Apache. Au démarrage : `mydestination` et `/etc/mailname`. |
@@ -49,7 +51,7 @@ Toutes les variables sont déclarées par `ENV` dans le `Dockerfile`. Pour savoi
 
 Au démarrage, `start_nagios` remplit chacun des quatre premiers volumes avec l'exemple de `/orig` **s'il est vide**. Il ne modifie jamais un volume qui contient déjà des fichiers (voir [Démarrage et supervision](../architecture/demarrage-et-supervision.md)).
 
-Le fichier `docker-compose.yml` montre ce modèle : cinq volumes nommés (`nagiosetc`, `nagiosvar`, `customplugins`, `nagiosgraphvar`, `nagiosgraphetc`) sur l'image `jasonrivers/nagios:latest`. Ce fichier utilise l'ancienne clé `version: '3'` et ne déclare aucun port.
+Le fichier `docker-compose.yml` montre ce modèle : cinq volumes nommés (`nagiosetc`, `nagiosvar`, `customplugins`, `nagiosgraphvar`, `nagiosgraphetc`) sur l'image `ghcr.io/sirterrific/docker-nagios:latest`. Ce fichier utilise l'ancienne clé `version: '3'` et ne déclare aucun port.
 
 ## Compatibilité avec les volumes existants
 

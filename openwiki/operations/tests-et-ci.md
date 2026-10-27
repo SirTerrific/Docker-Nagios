@@ -1,25 +1,23 @@
 ---
 type: testing
 title: Tests et intégration continue
-description: Test de fumée tests/smoke.sh, workflow GitHub Actions build-test, exécution locale avec act, et scripts hérités Travis/build.sh.
+description: Test de fumée tests/smoke.sh, workflow GitHub Actions build-test, exécution locale avec act, test de migration sur volumes existants.
 tags: [testing, smoke-test, github-actions, act, ci]
 sources:
   - id: openwiki-source-79b37831c9c81206da1d88ec
     resource: repo://.github/dependabot.yml
   - id: openwiki-source-7a80b79a6fb3618cbfab08a2
     resource: repo://.github/workflows/build.yml
-  - id: openwiki-source-5733839de54e3cc774d6e83d
-    resource: repo://.travis.yml
-  - id: openwiki-source-8a2e26d4137b8250f68bb869
-    resource: repo://build.sh
   - id: openwiki-source-3a44815832a872f4778f822b
     resource: repo://SECURITY.md
+  - id: openwiki-source-80183875d301dfa560d2b7e4
+    resource: repo://tests/migrate.sh
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T18:14:48.411Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
 verified:
   - by: openwiki/0.7.2
-    at: 2026-10-27T18:14:48.411Z
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Tests et intégration continue
@@ -53,8 +51,9 @@ Le script affiche `PASS:`/`FAIL:` pour chaque contrôle, se termine par `ALL TES
 1. construction de l'image `nagios-ci:<run_id>` ;
 2. démarrage du conteneur `nagios-ci-<run_id>` ;
 3. extraction de la version attendue depuis la ligne `ENV NAGIOS_BRANCH` du Dockerfile, puis exécution de `tests/smoke.sh` ;
-4. en cas d'échec : `docker logs` et les 50 dernières lignes de `nagios.log` ;
-5. dans tous les cas : suppression du conteneur et de l'image.
+4. test de migration : `bash tests/migrate.sh nagios-ci:<run_id>` démarre `jasonrivers/nagios:latest` sur des volumes neufs, puis l'image construite sur les mêmes volumes, et relance le test de fumée ;
+5. en cas d'échec : `docker logs` et les 50 dernières lignes de `nagios.log` ;
+6. dans tous les cas : suppression du conteneur et de l'image.
 
 ### Permissions du token
 
@@ -84,11 +83,8 @@ act a besoin d'un accès au démon Docker de l'hôte. Le test de fumée passe pa
 
 `SECURITY.md` indique que seule la dernière image construite depuis `master` est supportée. Les vulnérabilités se signalent par le signalement privé de GitHub, sans ouvrir d'issue publique. Celles de Nagios Core lui-même vont à nagios.org ou à l'upstream.
 
-## Scripts hérités
+## Fichiers hérités supprimés
 
-- `.travis.yml` clone le dépôt upstream `JasonRivers/Docker-Nagios` et lance `./build.sh`. Il date de Travis CI et ne teste pas ce fork.
-- `build.sh` construit l'image `nagios` et la démarre sur le port 8080, sans aucune vérification.
-
-Ces deux fichiers sont exclus du contexte Docker par `.dockerignore`.
+`.travis.yml`, `build.sh`, `_config.yml` et `.dockerignore` ont été retirés du dépôt : ils venaient du projet d'origine et ne testaient pas ce fork. La CI repose uniquement sur GitHub Actions.
 
 Voir aussi [Mise à jour des versions](mise-a-jour-versions.md) pour le test de migration sur des volumes existants.

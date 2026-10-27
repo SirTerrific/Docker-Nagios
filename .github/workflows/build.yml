@@ -25,6 +25,9 @@ jobs:
           expected=$(sed -n 's/^ENV NAGIOS_BRANCH *nagios-//p' Dockerfile)
           bash tests/smoke.sh nagios-ci-${{ github.run_id }} "$expected"
 
+      - name: Migration test (volumes from jasonrivers/nagios)
+        run: bash tests/migrate.sh nagios-ci:${{ github.run_id }}
+
       - name: Container logs
         if: failure()
         run: |
