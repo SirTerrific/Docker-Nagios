@@ -5,7 +5,7 @@ description: Procédure pour monter les versions de Nagios Core et de ses compos
 tags: [upgrade, versions, compatibility, nagios-core, runbook]
 verified:
   - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
+    at: 2026-10-27T18:14:48.411Z
 sources:
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
@@ -15,7 +15,7 @@ sources:
     resource: repo://README.md
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+generated: { by: "claude-code", at: "2026-10-27T18:14:48.411Z" }
 ---
 
 # Mise à jour des versions
@@ -35,7 +35,7 @@ Toutes les versions des composants sont déclarées dans les `ENV` en tête du `
 
 L'étape NSCA fait son `git checkout` sur `$NSCA_BRANCH`. Elle utilisait auparavant `$NSCA_TAG`, une variable jamais définie : le build compilait alors la branche par défaut au lieu du tag voulu.
 
-Le tableau des versions du `README.md` n'est pas mis à jour automatiquement. Il faut le modifier en même temps que le Dockerfile.
+Le tableau des versions du `README.md` indique Nagios Core 4.5.14, comme le Dockerfile, mais il n'est pas synchronisé automatiquement. Il faut le modifier en même temps que le Dockerfile.
 
 ## Procédure
 

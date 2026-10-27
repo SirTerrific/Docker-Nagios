@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:47e091331f87845bbbaf16142f339b797305e86932bda09bcba2bc0125eee966",
+  "pageVersion": "sha256:007839ff827fa9f614f1a4766c37b1631128da4cdc5c0e6f0075a8246bb56816",
   "claims": [
     {
       "id": "claim_51e4dd4d49e344c3bc8554673abdd52b",
@@ -14,11 +14,15 @@
     },
     {
       "id": "claim_184187545a7544fa9da69b32fb050af6",
-      "statement": "Le tableau des versions du README indique toujours Nagios Core 4.5.12 et n'est pas synchronisé automatiquement avec le Dockerfile.",
+      "statement": "Le tableau des versions du README indique Nagios Core 4.5.14, comme le Dockerfile, mais n'est pas synchronisé automatiquement avec lui.",
       "evidence": [
         {
+          "resource": "repo://Dockerfile",
+          "version": "repo-file-v1:sha256:b138faeefc9573b300895e32ebcb8683dd33981a8dd1a8a6578eacd291f3429d"
+        },
+        {
           "resource": "repo://README.md#L9-L16",
-          "version": "repo-lines-v1:sha256:f447555fc42d81f5f91a9588344a8a58e216ab48f0cfe421e4ccf9f12e904ceb:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzkwNDljNTAzZGNjZjFhZmI2YTg1YTFlMGVkOWMyYjVkODg2NGU1YjY5MjhiMTAwMzVmNTNjZDU4MmE3NDg1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjY3OWFkNTFhY2ViMjQwMWNlMjNlZWMxNjhlZWEwNDkzZjdlZmI2YWJkNDdlMDlhYTAxOTA0MDBkZTdlOTY2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI0OGYyYzY4Yzc5YzNiMmEwMDQ0MjZjMjM3ZWFkZmM3ZTU4ZDExNzI3OTllMzM3MjNmMDNhMDQyOWEzMmU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhiNjViOWQ5Y2JkZDQwN2ZjMjExMjk5NTE4ZjAzNzdhOWI4MDhiNTI4ZTI2NmQwMjkyZTFmNzc1ZDk1YzhiMyJ9"
+          "version": "repo-lines-v1:sha256:9599c61e73c63a83c8269d42ce9a77e6ed1b5fd07276f86e75385ca68d4e0378:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzkwNDljNTAzZGNjZjFhZmI2YTg1YTFlMGVkOWMyYjVkODg2NGU1YjY5MjhiMTAwMzVmNTNjZDU4MmE3NDg1OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBjODBiOWJkZWVkOGU4MDdhNWI0ZWJmMGMyZGM1YTQxYjQ0MzljYmE4M2MyZGVhMDgyMTQwOTEyMWM4YmI1OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTI0OGYyYzY4Yzc5YzNiMmEwMDQ0MjZjMjM3ZWFkZmM3ZTU4ZDExNzI3OTllMzM3MjNmMDNhMDQyOWEzMmU2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODYxMmE2OTdlODRhNGMxMDNjODJhN2EzNDY2MTkzODEwZDc2ZmQ3ZmI3Y2NiYmIwZGMwNTQ3YjI3YjE2MmJjMiJ9"
         }
       ]
     },
@@ -55,6 +59,6 @@
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T18:14:48.411Z"
   }
 }

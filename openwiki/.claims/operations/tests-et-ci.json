@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:0392f9cd3b0fb570215b2d8ca4c2a3383fd0a650dc16861130a7c4ead570fd37",
+  "pageVersion": "sha256:3b7e6c43066791128dfa1a39add5748a411c53d08cd00eada79f7c7b289e5519",
   "claims": [
     {
       "id": "claim_8d774a1890c741ac86715762f450b4fb",
@@ -48,7 +48,7 @@
       "evidence": [
         {
           "resource": "repo://.github/workflows/build.yml",
-          "version": "repo-file-v1:sha256:14977b5b8ad90d639d2c6c0e86b15ac59ead1e2b1163442338081af18ec80cda"
+          "version": "repo-file-v1:sha256:050a125e1a45ee9c4f913c76951ba4c9039883f369e87af0fc934de166de7eab"
         }
       ]
     },
@@ -58,7 +58,7 @@
       "evidence": [
         {
           "resource": "repo://.github/workflows/build.yml",
-          "version": "repo-file-v1:sha256:14977b5b8ad90d639d2c6c0e86b15ac59ead1e2b1163442338081af18ec80cda"
+          "version": "repo-file-v1:sha256:050a125e1a45ee9c4f913c76951ba4c9039883f369e87af0fc934de166de7eab"
         }
       ]
     },
@@ -75,10 +75,60 @@
           "version": "repo-file-v1:sha256:9105d85f2b0069ead7944fac5fc0945e61fc387f1e4b372c0f7b1b88dad5e843"
         }
       ]
+    },
+    {
+      "id": "claim_05b5518440f74b6fa15632e219258a10",
+      "statement": "Le workflow build.yml déclare permissions contents: read au niveau racine, donc le GITHUB_TOKEN est en lecture seule par défaut.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L8-L9",
+          "version": "repo-lines-v1:sha256:e8f2263b0413f25128aa11d16dd3ae0ef6b0c660fb5b1dc08fe71e0a7daabb4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzUyNjI0N2VkZTAwNmU5YmRhYjljNjg1MDcyODQyNWQxYjQxNjZjYWY1Y2FjNTBjZjA5NTVjNDRkMjRjMWE4ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZDllY2VkYzE4ZWNhZjFkYWY5ZTdiZWZiOWZkNzllMmMzY2YxNTU5OWU1M2U3OWNkYmQ5MDFlZTZlMmM5NzlkMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDlkNGZlMzYxMTkzM2EzZWJmN2ZkMTFiNDYxMmFiOTY1NTYyZjc4OWJmNjY3NDE5ZDE0MTI0ZmZkZjM1Y2Y5ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzkyMGY0NDJhOTZmNzA5NjZiMGRmNTYyYTI1MzBhOGZlNzhhZDhlZDlhMTM3Yjg5ZDhkNzc5ZjA0ZmIxMGYwNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c4d8ebbd50d7411b85f5c65f4b273246",
+      "statement": "Le job publish dépend de build-test et ne s'exécute que sur un push vers refs/heads/master, avec les permissions contents: read et packages: write.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L40-L46",
+          "version": "repo-lines-v1:sha256:abd4aee98ff19e3210ff9aeab6f8a1381e77becb30dbd4e218d801408b4e4f7e:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTgyNTRjOTE2YTQ0ODEyM2UyZDNkOTVlYmFhMmU0YjFkYjBmYTdiNTQzZTEyYzNlMWIxMWNmMzYyMTZmMjAwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2U2ODlhYTlmODNjNTRlOTFiMDRiNDVhOWY1NWQxOGIxM2Y0ZmZlYWQzMDc0YmJlZTMzMWMzNmQ0ZDE1MTYyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2NiNzVkNjJiN2NkZjkyOTAxZDIzMDYzYmZmNDE2MWYzZmVmYzYzNzRhYzVlYTI2YWFkMDk2Y2Q0MjNkZDcxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNDg2NmNhY2VmYWMzMmJjOGMzOTcyM2E4YjZmZDRhMzQzMzcwZDhlZmQ0MDNkYTU3ZTFkYWExYzM5N2E2ZDUyZSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_50252a2d7f514193ac2973593c67052d",
+      "statement": "Le job publish se connecte à ghcr.io, construit l'image avec les tags latest et la version extraite de ENV NAGIOS_BRANCH, puis pousse les deux tags.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L50-L59",
+          "version": "repo-lines-v1:sha256:8d68ed491a72bc260498e1427769d237892ad28499eb8439e70da833ea63a4a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMGQ3ODI5OWEwNTBkMTdkYWUyOTA0NDhkOGY4NTMzMmY1NDMwMmIwMWJjM2Y4MjgzNjNkY2NkMzczNTVlY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YTMwYmU1ZTFlMTllNmVlODFlZDY5ZDE3MzIxMTA4Mzk1YmYyMTNlZTU5M2E0ODgyNGQwMzA4ZjEwOWRmNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4NjZjYWNlZmFjMzJiYzhjMzk3MjNhOGI2ZmQ0YTM0MzM3MGQ4ZWZkNDAzZGE1N2UxZGFhMWMzOTdhNmQ1MmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_16ce434d127c425f8db9326a81bb68d1",
+      "statement": "Dependabot propose chaque semaine des mises à jour de l'image de base Docker et des actions GitHub.",
+      "evidence": [
+        {
+          "resource": "repo://.github/dependabot.yml",
+          "version": "repo-file-v1:sha256:a69d33567be840ce2e5d7264549344a6bde1482d5fe8543116649bc4e713352e"
+        }
+      ]
+    },
+    {
+      "id": "claim_b39aeecf32434f1f815d894b63332bc8",
+      "statement": "SECURITY.md indique que seule la dernière image construite depuis master est supportée et que les vulnérabilités se signalent par le signalement privé de GitHub.",
+      "evidence": [
+        {
+          "resource": "repo://SECURITY.md",
+          "version": "repo-file-v1:sha256:96ccc0bc03937d862d277fa69a06d409a7a0d33750dc684fd3e3429eecd146c6"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T15:02:04.479Z"
+    "at": "2026-10-27T18:14:48.411Z"
   }
 }

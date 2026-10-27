@@ -37,25 +37,25 @@
       "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e"
     },
     "/openwiki/operations/mise-a-jour-versions.md": {
-      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
-      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61",
-      "pageVersion": "sha256:47e091331f87845bbbaf16142f339b797305e86932bda09bcba2bc0125eee966",
+      "pageVersion": "sha256:007839ff827fa9f614f1a4766c37b1631128da4cdc5c0e6f0075a8246bb56816",
       "completedBy": "claude-code",
-      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e"
+      "completedRunId": "6ba158eb-474e-47a5-848c-1cd0e474e18d",
+      "gitHead": "690790641d5a94b06511f438d0134d158fe4a2b1",
+      "sourceFingerprint": "sha256:4049078fffa827c55a7e467915ecb58f1fe09e2f36f52e2e6e888c463e8589cb"
     },
     "/openwiki/operations/tests-et-ci.md": {
-      "pageVersion": "sha256:0392f9cd3b0fb570215b2d8ca4c2a3383fd0a650dc16861130a7c4ead570fd37",
+      "pageVersion": "sha256:3b7e6c43066791128dfa1a39add5748a411c53d08cd00eada79f7c7b289e5519",
       "completedBy": "claude-code",
-      "completedRunId": "4a9afb12-e6e8-4f61-9923-02ecf6565b72",
-      "gitHead": "eeaedc0fc594dfd5c17c6e86c8d2d0c128050456",
-      "sourceFingerprint": "sha256:5945f687c4f64fa004db55475e452c9a3ec6e92fee986fad63000b1a131d1ad9"
+      "completedRunId": "6ba158eb-474e-47a5-848c-1cd0e474e18d",
+      "gitHead": "690790641d5a94b06511f438d0134d158fe4a2b1",
+      "sourceFingerprint": "sha256:4049078fffa827c55a7e467915ecb58f1fe09e2f36f52e2e6e888c463e8589cb"
     },
     "/openwiki/quickstart.md": {
-      "gitHead": "756ea54309f2995ebc5212b12b949bbe3efb11b8",
-      "sourceFingerprint": "sha256:2a546a862f0118ff38899eaac43e07076fe869cac8a966873bf53f4aec587b61",
-      "pageVersion": "sha256:8bfd4e270c7db9a21218a9e8045d2efe9be57726d0b3311728e18fcd07b55321",
+      "pageVersion": "sha256:74d83bf09538b256fb12c6255d217dac1b8ec548681c159e0d80cb93106e8d7a",
       "completedBy": "claude-code",
-      "completedRunId": "f76b35e6-1b8f-428f-acfc-eae44091239e"
+      "completedRunId": "6ba158eb-474e-47a5-848c-1cd0e474e18d",
+      "gitHead": "690790641d5a94b06511f438d0134d158fe4a2b1",
+      "sourceFingerprint": "sha256:4049078fffa827c55a7e467915ecb58f1fe09e2f36f52e2e6e888c463e8589cb"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:8bfd4e270c7db9a21218a9e8045d2efe9be57726d0b3311728e18fcd07b55321",
+  "pageVersion": "sha256:74d83bf09538b256fb12c6255d217dac1b8ec548681c159e0d80cb93106e8d7a",
   "claims": [
     {
       "id": "claim_3d8eb2cbc20748f9bbfa11ebeca3295d",
@@ -35,10 +35,34 @@
           "version": "repo-lines-v1:sha256:932d391af05d3ee719829325aeb54715f4708636b2be244ff6a1434a87e572b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M0MjNkY2FiNTM5ODBhMWM5NjkxMjYwZmQyZjcwOWNiMjM3MjM4MTFiY2RjMDZiOGY4YzYwMzEyNGYzYzNkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDQ0MGU1M2M2ZGZlZTAyMzdmYzhmZWM0MmFjMWIxYWMwNDAwYTBjM2RkMzQzMDZmOTU1NmNhMzI0ZjljNWM5MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGYzN2ExOThlMGZlNzE4MzNjMDRjOTZjMDAxNzVjOTM0YTg3NDA4OTg2YTllNTJkNjgyZTkyMTg5ODQwNWI4YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWQzZjM1YmJkODJhNTc3OTk4M2JkNGQyZDA2NzkyZjRjNTA1YjQ1ZTQ4ZjA4MDVkNDcxNWEyNDc4OTRkMWFkMCJ9"
         }
       ]
+    },
+    {
+      "id": "claim_c17e6110db30458e91ec7c6e1e07bcb5",
+      "statement": "L'image est publiée sur ghcr.io sous le nom du dépôt en minuscules, avec les tags latest et la version de Nagios Core, à chaque push sur master après réussite de build-test.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L40-L59",
+          "version": "repo-lines-v1:sha256:1ca1f11a13f93205f962c5b8fe61e14de5704499caf9bda7ccea0e8d9915a582:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU4MjU0YzkxNmE0NDgxMjNlMmQzZDk1ZWJhYTJlNGIxZGIwZmE3YjU0M2UxMmMzZTFiMTFjZjM2MjE2ZjIwMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YTMwYmU1ZTFlMTllNmVlODFlZDY5ZDE3MzIxMTA4Mzk1YmYyMTNlZTU5M2E0ODgyNGQwMzA4ZjEwOWRmNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjYjc1ZDYyYjdjZGY5MjkwMWQyMzA2M2JmZjQxNjFmM2ZlZmM2Mzc0YWM1ZWEyNmFhZDA5NmNkNDIzZGQ3MWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_11e79571281c41fcb5f4f5ff18b55a27",
+      "statement": "Le dépôt contient SECURITY.md et .github/dependabot.yml, qui configure des mises à jour hebdomadaires des images Docker et des actions GitHub.",
+      "evidence": [
+        {
+          "resource": "repo://.github/dependabot.yml",
+          "version": "repo-file-v1:sha256:a69d33567be840ce2e5d7264549344a6bde1482d5fe8543116649bc4e713352e"
+        },
+        {
+          "resource": "repo://SECURITY.md",
+          "version": "repo-file-v1:sha256:96ccc0bc03937d862d277fa69a06d409a7a0d33750dc684fd3e3429eecd146c6"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T18:14:48.411Z"
   }
 }
