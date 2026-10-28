@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:bd5ca9d2872f7a1e7b6c12db12c9ad880eb8adba6f5780da6c3e1a3b74bf75ff",
+  "pageVersion": "sha256:00583b4cc75462a7169b27b038268b16d859c7fcf8926b0e369c39712ae69fcd",
   "claims": [
     {
       "id": "claim_2edbdafa6c4b4a1692b5e359d226987f",
@@ -11,7 +11,7 @@
           "version": "repo-lines-v1:sha256:a30cfabfacab40aef4d05bfc2486c1975d3dd919e8652301a61a272a72dce28b:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmJiNDI5YWQ5ZjZjOGM4ZjVlOWUzOGJjYWM5M2Y5ODZkZTc0N2Y4YjU3MGZiNTk0MTgyZGVmNDRkNzQ5MDU3ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmE0ZTFjOWVkMDYyZWRiY2M4YjUxZjZkZGU4YzNjMTVhZDk2ZDNjNzQwNzM2NDViZThkZWIyZDBhZTZjNmFkYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzk2YTgxY2IzYmNhNjk1MGZiMjA3NDg2MDZhMTk4ZDQzNTY5MmQxNjNhNzNjMDhjMzdhZGM0NjY3ZDU4ZDI4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWM2OGU4MmMxZjNkMTk5MmQwZGIxMzU5ZjJhMmIwYzY3ZGY5MDEyNmU4YmZhOTZiNjEwMjZjMTU1MGQwNzBhNSJ9"
         },
         {
-          "resource": "repo://README.md#L63-L63",
+          "resource": "repo://README.md#L76-L76",
           "version": "repo-lines-v1:sha256:e071dd171f098c0582e3a327d7340bbc67439c5a10ccc2b3293a736a3d00ab6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA3MWRkMTcxZjA5OGMwNTgyZTNhMzI3ZDczNDBiYmM2NzQzOWM1YTEwY2NjMmIzMjkzYTczNmEzZDAwYWI2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTA3MWRkMTcxZjA5OGMwNTgyZTNhMzI3ZDczNDBiYmM2NzQzOWM1YTEwY2NjMmIzMjkzYTczNmEzZDAwYWI2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzU2NDFkZDJmY2IzOTFiMTJmYmI3MGNhYjhlNTJhY2I1M2JkZTUxZjM1ZTkwYTIzOTA1ZTY1OGU5NGRiYTJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzViZTZkM2YxMjBhMzhlMTcxNWI4ZmQ5Y2FlYzk5ODc3ZDZjOGI1NTliZGIyNmY3MTlkYjE1NTYzMjAyODI0NCJ9"
         }
       ]
@@ -59,16 +59,6 @@
       ]
     },
     {
-      "id": "claim_b11a0f7e190142988bb0b94037ee6cdc",
-      "statement": "Le fichier docker-compose.yml d'exemple monte cinq volumes nommés sur l'image jasonrivers/nagios:latest et ne publie aucun port.",
-      "evidence": [
-        {
-          "resource": "repo://docker-compose.yml",
-          "version": "repo-file-v1:sha256:744e34f2a66cf86df6a1b2de83a7bdef911610aa5ca2e0cadaeaa508e4606808"
-        }
-      ]
-    },
-    {
       "id": "claim_950b1aafb84246dab74f4604ca16836c",
       "statement": "L'utilisateur nagios (UID 997) et le groupe nagios (GID 1001) ont des identifiants fixes, pour que les fichiers des volumes existants restent accessibles.",
       "evidence": [
@@ -87,14 +77,34 @@
           "version": "repo-lines-v1:sha256:6017786b3f04d7cc27e19de055c387089f039646906362b3209e548e029143d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAxNzc4NmIzZjA0ZDdjYzI3ZTE5ZGUwNTVjMzg3MDg5ZjAzOTY0NjkwNjM2MmIzMjA5ZTU0OGUwMjkxNDNkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjAxNzc4NmIzZjA0ZDdjYzI3ZTE5ZGUwNTVjMzg3MDg5ZjAzOTY0NjkwNjM2MmIzMjA5ZTU0OGUwMjkxNDNkMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2QwM2YyMjQzMGM5ZDcxYWMzNzFhMzEzNDQ4NWJjOGM3MjNmMjRlNzhhZjQyZjVkODYxZGZiY2JlZTJlNmQ2OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjIsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDQ1YjE0Y2NiMmQ5Yzc5YjI1MGZjMmE4MzA5ZjMwMGQ2MWVkNWVhZGU3M2IwYzliN2VhOGMzZWU2OTdjOGZkYiJ9"
         },
         {
-          "resource": "repo://README.md#L39-L48",
-          "version": "repo-lines-v1:sha256:5c3ab8dd7bdf3cab8a17a9fbe69bbe0a0c75044b06f6ace1592014cee99e42d1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4NmQ3MTRkZWVhMzg0MDdkM2Q4MmJjNDhlMWI3ZmNkYTUzMjFlOGY5MmZmYzk2NmIzNjAzODM2YzlhZmZjY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZjk5NzJjMmUwNmY1MTgxYjFhMDZlNWRiOGM5ZjM0MzZjMmE4YmFjZjljMmM1NmExMDk5MjQwMzZlOWY4YzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2MmVjYzI0ZjU5OTEwMDdhMDhiNjY0MzU0YWNkMjJkMTNlMWYwMzBjMzA5YzFkNzhkNzAwZjBkMTQzOTcxN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkMWJlODY0ZTg4NWRmOTVmMjU1MTI3OGJhNjQ4MzJlZDRhOWE0MjBhODQzOGU2NTllZjVlYjAwZTA0MDU2NTQifQ"
+          "resource": "repo://README.md#L52-L61",
+          "version": "repo-lines-v1:sha256:10828dcafbac53564e1be557c678826658047d9ea57f199ae6547d10df5c3b32:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4NmQ3MTRkZWVhMzg0MDdkM2Q4MmJjNDhlMWI3ZmNkYTUzMjFlOGY5MmZmYzk2NmIzNjAzODM2YzlhZmZjY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZjk5NzJjMmUwNmY1MTgxYjFhMDZlNWRiOGM5ZjM0MzZjMmE4YmFjZjljMmM1NmExMDk5MjQwMzZlOWY4YzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2MmVjYzI0ZjU5OTEwMDdhMDhiNjY0MzU0YWNkMjJkMTNlMWYwMzBjMzA5YzFkNzhkNzAwZjBkMTQzOTcxN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkMWJlODY0ZTg4NWRmOTVmMjU1MTI3OGJhNjQ4MzJlZDRhOWE0MjBhODQzOGU2NTllZjVlYjAwZTA0MDU2NTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1a7ccde9d27f4ab993c4f5af62305082",
+      "statement": "Le docker-compose.yml d'exemple monte cinq volumes nommés sur l'image ghcr.io/sirterrific/docker-nagios:latest.",
+      "evidence": [
+        {
+          "resource": "repo://docker-compose.yml",
+          "version": "repo-file-v1:sha256:3ee8bbcea5883a861c3ead7582142f933de04fbe54373339d26ede2815c3e196"
+        }
+      ]
+    },
+    {
+      "id": "claim_180da9869f0445fdbe39a789fcdf358e",
+      "statement": "start_nagios écrit un avertissement sur stderr si NAGIOSADMIN_PASS vaut encore nagios.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L32-L34",
+          "version": "repo-lines-v1:sha256:62fe7de39d3a4ea62760d0d95edb2c1cf2b1dff103667c2417727415b6f43baa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODZmMjJhYzVmYWZlYjEyNTA0NjU0MzBmYjg2NTdkNjY5NmJkZWRjZWM4NzE5NzU0MmE2YzA4NDhlZWU2MzRjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2I1NDBlYmJiM2EzMzc5ZmMxZjUxNDFhYzYzZGQxMzNkNGI1YjExZmMzZGYwYzBhZDI5YjQ4MjM3NTJkYjhkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRkMDQ0YjA5OGE0ZDMyNjBhOGU1ZTA0MTE1M2E4YjRlODg3ODRmODVkZjBjMDI0YTYwMzg2ODY0NzEzNDkxMCJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

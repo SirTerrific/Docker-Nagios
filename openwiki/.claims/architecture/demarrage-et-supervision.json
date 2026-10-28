@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:735fa71a637255db09cc117e9f0c409533669f0ece5b34e3f6e796f691d760f3",
+  "pageVersion": "sha256:4822ef6338c1846b4512818b27f3e85dd66f94e6f49cb7beed9b0e08ad29abfa",
   "claims": [
     {
       "id": "claim_fbccb64c7e8e4bb6a44b38a6c9015a44",
@@ -23,56 +23,12 @@
       ]
     },
     {
-      "id": "claim_1e0de3f11b4543e097a55c2815c3530c",
-      "statement": "start_nagios lance runsvdir -P /etc/service et, sur SIGTERM, SIGHUP ou SIGINT, arrête les services avec sv force-stop, puis termine les processus orphelins avec un délai de 5 secondes avant kill -9.",
-      "evidence": [
-        {
-          "resource": "repo://overlay/usr/local/bin/start_nagios#L32-L55",
-          "version": "repo-lines-v1:sha256:d9979d273de5f026d830645a508aa060399c813441d81fff572c29cb1681af61:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjQ4NjRjYzE4NzY3NjMyMjkyYzg4NmE1MzU5MmM5ZjYwMjhkZGFiMGU5YTc0OWQ5NzNhNDVkOTU3YjBkNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyOGE5NDcwN2QwNDMzNTVlNzIxZjgzOTc2MzgyM2Q2YTA2YThhMDQ4MWQ1NTRiNzZiNjRmZDIzOTQ1NDM5NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNiNTQwZWJiYjNhMzM3OWZjMWY1MTQxYWM2M2RkMTMzZDRiNWIxMWZjM2RmMGMwYWQyOWI0ODIzNzUyZGI4ZDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIifQ"
-        }
-      ]
-    },
-    {
       "id": "claim_398a4ff971414e469c27989fb7161d6e",
       "statement": "Le service apache exporte TZ depuis NAGIOS_TIMEZONE et lance apache2 -D NO_DETACH.",
       "evidence": [
         {
           "resource": "repo://overlay/etc/sv/apache/run#L1-L8",
           "version": "repo-lines-v1:sha256:de76d0be97ec2975221cf19c954b1a32af3b8b5f0b0bdd154f6532770f1d8be5:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg3NWY5Mjg1NDZhZWU3ODU1Y2IxZGI5YWZjOGFiM2YxYThhMzRkNDNkZTViYmQ2MmY3MDc2ZDdiYTlmMzkxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDJkODEwMDMyNGQ3NjhmNGViYjQwYzdkMTBlODQ1MTIyMDU2MGZhNTdmMjg1MjA0Zjc3MzFkODkwMWVjZDdlMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
-        }
-      ]
-    },
-    {
-      "id": "claim_29b76813c39d4f6ca6476a3d68c3ee14",
-      "statement": "Le service nagios fait un chown vers nagios de /opt/nagiosgraph, tente de réinstaller nagiosgraph depuis /tmp/nagiosgraph si ngshared.pm manque, puis lance /opt/nagios/bin/nagios avec nagios.cfg.",
-      "evidence": [
-        {
-          "resource": "repo://overlay/etc/sv/nagios/run#L3-L18",
-          "version": "repo-lines-v1:sha256:c5073edcfd5d6980b48b381b9a5a7fe198118195a5cb41a8a82903d3e8575700:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzNmNiMTVhODY3MjQ3N2Y0NGQxYWNkZTEyNDgzNTc2YjJhOGY0ZTllZGRlZGI5ZjM0MWU3MDllMzRjMmUxOWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQzOTRhOGIzZmE5OWRmNDUzYzcwYzExYmExZTY3ZDhiNDljMGMxYzMxYjE0YzJhZjE1M2NkYzlhYTRhMGE3YzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5NjIyZmFlMmFiMDJmZTM1OWVkMTUwOTY0YTkyNjUzNjk3YmZiMjM1ZTIwOTQ3YWEzYzNmMzg1NDg0ZTk3YmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
-        }
-      ]
-    },
-    {
-      "id": "claim_e8638c49ad1a4f67b28f8f13cef11b55",
-      "statement": "Le build supprime /tmp/nagiosgraph après l'installation de nagiosgraph, ce qui rend inopérante la réinstallation tentée par le service nagios.",
-      "evidence": [
-        {
-          "resource": "repo://Dockerfile#L183-L194",
-          "version": "repo-lines-v1:sha256:e430cc187350bcf503ab6bc8b3064f235c9330e342c529ce16a8b96da40b8703:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk0MzA1YTc5NzlkZDQyNTM1NDU1NmY0ZjlkZGNkMWIzMjUxNzVjYjY3Y2ZhMmMxZTI1MTMzMWZlZmEyNTMyZjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkNTRhMWNiYzk2ZDU4YjA0OGY4OTdkN2RmMzRmNDUwNGQzM2VhZDI1NGQyZGQ3MmNiMDA4OWFjY2QxYzczMGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMwNWEyOTMxMmEwNzRjODM4YTE3NTE2MGQ3MDljMjY0OTgzMDJhMjY4NDI2OWZmYTMwMjQ1ZmY2ZDI4ODQ2NTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0MDJkOGVkZTQ5YWVjMWRkZWU4MGNjYWMwOGRhZGUwNmQ4NmU4NzA2M2Q4NjU0YWNmN2E3ZDMwYjIxNDc2ODkifQ"
-        },
-        {
-          "resource": "repo://overlay/etc/sv/nagios/run#L5-L16",
-          "version": "repo-lines-v1:sha256:9b1003b774e31968a619cfe43d166adf3f37280c9a9987636980e86078888333:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5YmI5NGVhMzU1ZWUxNTI0MDg2NTJjMDZhNTExNTk3NzEzYzM5MzhkODZhMTRmZjVkZDQxMTU4NmE2ZWRhMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NjlkMjM3Y2Q0MjBiOWQzOGI5ODFhMGE0ZjY3NzAxOTBhNGE4M2RjYTFmZTU2YzRmNWJhMWUyY2JjMGVmNzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkMjk3ZjU5ZmExZGU4MjViNDcwNjBiYjhkM2RmYTU0Y2FlMDI3NjhjYzAzMDliY2Y0Y2ExY2VjYjA2OTVlOGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkNjE1NGNlYmQyZWJhODQyYWUzMmNiOTJlYzdkYzc2MGVkY2Q4MmUzYTZjODY0NDJjOGRlM2UwYWY0YjgxYjMifQ"
-        }
-      ]
-    },
-    {
-      "id": "claim_bdca21c93538405fbaff5a59ef218f8d",
-      "statement": "Le service nsca ne démarre que si /opt/nagios/etc/nsca.cfg existe ; sinon il affiche un message et se termine.",
-      "evidence": [
-        {
-          "resource": "repo://overlay/etc/sv/nsca/run#L1-L7",
-          "version": "repo-lines-v1:sha256:016d545566211a5484eb1bfee887a8e4c27024b0291d1419772a1e63566de06a:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg3NWY5Mjg1NDZhZWU3ODU1Y2IxZGI5YWZjOGFiM2YxYThhMzRkNDNkZTViYmQ2MmY3MDc2ZDdiYTlmMzkxNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjRiZGM4NDgxMDk3MjJhMzgzZDBhOTcyYzZlYjg1OWYyYWJkMjk1NjViOGM0Y2M3MTk5ZTdjOWViNzA4ZjFiNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         }
       ]
     },
@@ -99,10 +55,50 @@
           "version": "repo-lines-v1:sha256:1b44c65d444ca56bacad757119e8cfb381770bb62be230890215a0ed01ee7e5a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0NGM2NWQ0NDRjYTU2YmFjYWQ3NTcxMTllOGNmYjM4MTc3MGJiNjJiZTIzMDg5MDIxNWEwZWQwMWVlN2U1YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0NGM2NWQ0NDRjYTU2YmFjYWQ3NTcxMTllOGNmYjM4MTc3MGJiNjJiZTIzMDg5MDIxNWEwZWQwMWVlN2U1YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzZkN2NhNjYyODRmODQyYzdkNjQ3ZTRiNTE3M2U5NTgxYWE1YzZkMTc3OGM2OGI4NGIwZGI2MjUwZDVlNjY3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmEzY2Y1MTkyMzU0ZjcxNjE1YWM1MTAzNGIzZTk3YzIwZWRhOTk2NDNmY2FmNWJiZTZkNDFhZDU5YmQxMjE2NyJ9"
         }
       ]
+    },
+    {
+      "id": "claim_6f10be5e2b48430fa3bb52aabcb61680",
+      "statement": "Sur SIGTERM, SIGHUP ou SIGINT, start_nagios arrête chaque service avec sv force-stop puis envoie HUP à runsvdir et attend sa fin ; il ne nettoie plus les processus orphelins.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L36-L51",
+          "version": "repo-lines-v1:sha256:e222fe196e3d780abfa162a08069a08b2c6044818260d282b2f33d7efbd67c51:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzYjQ4NjRjYzE4NzY3NjMyMjkyYzg4NmE1MzU5MmM5ZjYwMjhkZGFiMGU5YTc0OWQ5NzNhNDVkOTU3YjBkNGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NTlhNzE3YTc5YWI4ZDBhNDM1YWY1NmU3ZGE3MTM1ODI4ZjYxNTcyODMyZWZkMThhNTkzOGEwYzQ3NTNhZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwMDlmNzQxZjExYjJjN2RjYTI1NDk4M2I0ZjU2NThhMDJiNzNlYjY2MTE4Yjc3NzAxODE4YTU2ZjM5Y2IyODciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiMTZiMzhiNzNhYzFhMzg1OTA0YmFkZjNiZThkZjkzOGI2OTczYWM2NTFjMWZhYjI4ZmU0YjIxZGQwMzNkMDcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_758a055741a04f79b70f9f34ca7ebdca",
+      "statement": "Au démarrage, start_nagios écrit un avertissement sur stderr si NAGIOSADMIN_PASS vaut encore la valeur par défaut nagios.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/usr/local/bin/start_nagios#L32-L34",
+          "version": "repo-lines-v1:sha256:62fe7de39d3a4ea62760d0d95edb2c1cf2b1dff103667c2417727415b6f43baa:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODZmMjJhYzVmYWZlYjEyNTA0NjU0MzBmYjg2NTdkNjY5NmJkZWRjZWM4NzE5NzU0MmE2YzA4NDhlZWU2MzRjYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzc2OWQyMzdjZDQyMGI5ZDM4Yjk4MWEwYTRmNjc3MDE5MGE0YTgzZGNhMWZlNTZjNGY1YmExZTJjYmMwZWY3NiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2I1NDBlYmJiM2EzMzc5ZmMxZjUxNDFhYzYzZGQxMzNkNGI1YjExZmMzZGYwYzBhZDI5YjQ4MjM3NTJkYjhkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWRkMDQ0YjA5OGE0ZDMyNjBhOGU1ZTA0MTE1M2E4YjRlODg3ODRmODVkZjBjMDI0YTYwMzg2ODY0NzEzNDkxMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc0d3e1fc2d34f71b46d6ac8dc706a11",
+      "statement": "Le service nagios fait un chown vers nagios de /opt/nagiosgraph puis lance /opt/nagios/bin/nagios avec nagios.cfg.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/nagios/run",
+          "version": "repo-file-v1:sha256:b17a21b3aa50d4a5126b7d57008342ae32e3a54784a676b8ce2b71f469f9cfce"
+        }
+      ]
+    },
+    {
+      "id": "claim_e7ea8acefaf54c3d8f6eca64fb8dcc29",
+      "statement": "Le service nsca lance nsca -f --single si /opt/nagios/etc/nsca.cfg existe ; sinon il affiche un message et reste en veille avec sleep infinity.",
+      "evidence": [
+        {
+          "resource": "repo://overlay/etc/sv/nsca/run",
+          "version": "repo-file-v1:sha256:5d605433eb498ba1a494560352ad3391c2c40fbec412fca7188839b6c098c50d"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

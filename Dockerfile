@@ -101,7 +101,7 @@ RUN ( id -u $NAGIOS_USER    || useradd --system -u 997 -d $NAGIOS_HOME -g $NAGIO
     ( id -u $NAGIOS_CMDUSER || useradd --system -d $NAGIOS_HOME -g $NAGIOS_CMDGROUP $NAGIOS_CMDUSER )
 
 RUN cd /tmp                                           && \
-    git clone https://github.com/multiplay/qstat.git  && \
+    git clone https://github.com/multiplay/qstat.git && git -C qstat checkout bb34c265ca18a31487fcf8fa1071ee05b4169752 && \
     cd qstat                                          && \
     ./autogen.sh                                      && \
     ./configure                                       && \
@@ -181,7 +181,7 @@ RUN cd /tmp                                                 && \
     cd /tmp && rm -Rf nsca
 
 RUN cd /tmp                                                          && \
-    git clone https://git.code.sf.net/p/nagiosgraph/git nagiosgraph  && \
+    git clone https://git.code.sf.net/p/nagiosgraph/git nagiosgraph && git -C nagiosgraph checkout c1d98baaea7df181dc558ebddfaa4338a2f70c5f && \
     cd nagiosgraph                                                   && \
     ./install.pl --install                                      \
         --prefix /opt/nagiosgraph                               \
@@ -195,12 +195,12 @@ RUN cd /tmp                                                          && \
 
 RUN cd /opt                                                                         && \
     pip install --break-system-packages pymssql paho-mqtt                           && \
-    git clone https://github.com/willixix/naglio-plugins.git     WL-Nagios-Plugins  && \
-    git clone https://github.com/JasonRivers/nagios-plugins.git  JR-Nagios-Plugins  && \
-    git clone https://github.com/justintime/nagios-plugins.git   JE-Nagios-Plugins  && \
-    git clone https://github.com/nagiosenterprises/check_mssql_collection.git   nagios-mssql  && \
-    git clone https://github.com/jpmens/check-mqtt.git           jpmens-mqtt        && \
-    git clone https://github.com/danfruehauf/nagios-plugins.git  DF-Nagios-Plugins  && \
+    git clone https://github.com/willixix/naglio-plugins.git     WL-Nagios-Plugins && git -C WL-Nagios-Plugins checkout 4011ea1507eefa35a07ee11a3035a276d6c1fae0 && \
+    git clone https://github.com/JasonRivers/nagios-plugins.git  JR-Nagios-Plugins && git -C JR-Nagios-Plugins checkout 5914922632e59bb788db816a6940529e4c2f513f && \
+    git clone https://github.com/justintime/nagios-plugins.git   JE-Nagios-Plugins && git -C JE-Nagios-Plugins checkout 3b81f33e1277290475cddb78fb377701ddb38f95 && \
+    git clone https://github.com/nagiosenterprises/check_mssql_collection.git   nagios-mssql && git -C nagios-mssql checkout c33be86a2ba5dc9671e4e1ff3fec7d496e32111b && \
+    git clone https://github.com/jpmens/check-mqtt.git           jpmens-mqtt && git -C jpmens-mqtt checkout 003f5cf392051deed4024e75cbf445aca400060f && \
+    git clone https://github.com/danfruehauf/nagios-plugins.git  DF-Nagios-Plugins && git -C DF-Nagios-Plugins checkout 484c9fa8ad0d329aa0734fcc3615976d5b9b7c1c && \
     chmod +x /opt/WL-Nagios-Plugins/check*                                          && \
     chmod +x /opt/JE-Nagios-Plugins/check_mem/check_mem.pl                          && \
     chmod +x /opt/jpmens-mqtt/check-mqtt.py                                         && \

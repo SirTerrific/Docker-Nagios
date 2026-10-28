@@ -29,6 +29,10 @@ if [ ! -f "${NAGIOS_HOME}/etc/htpasswd.users" ] ; then
   chown -R ${NAGIOS_USER}.${NAGIOS_GROUP} "${NAGIOS_HOME}/etc/htpasswd.users"
 fi
 
+if [ "${NAGIOSADMIN_PASS}" = "nagios" ]; then
+  echo "WARNING: NAGIOSADMIN_PASS is the default value (nagios). Set NAGIOSADMIN_PASS before exposing this container." >&2
+fi
+
 shutdown() {
   echo Shutting Down
   ls /etc/service | SHELL=/bin/sh parallel --no-notice sv force-stop {}
@@ -37,11 +41,6 @@ shutdown() {
     wait "${RUNSVDIR}"
   fi
 
-  # give stuff a bit of time to finish
-  sleep 1
-
-  ORPHANS=$(ps -eo pid= | tr -d ' ' | grep -Fxv 1)
-  SHELL=/bin/bash parallel --no-notice 'timeout 5 /bin/bash -c "kill {} && wait {}" || kill -9 {}' ::: "${ORPHANS}" 2> /dev/null
   exit
 }
 

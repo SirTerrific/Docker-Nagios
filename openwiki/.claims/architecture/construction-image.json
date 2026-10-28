@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:4352e7363eb7500f4e31dbae6a0557b372b36b7ec21bbdc63fe9b2c817df6825",
+  "pageVersion": "sha256:8e408f8c35229b8f7f57a4222a5bfc3efcab0eee7c9887ed975b55012f69a095",
   "claims": [
     {
       "id": "claim_bb9c72d4cd224eb0b743118c185b79dc",
@@ -117,16 +117,6 @@
       ]
     },
     {
-      "id": "claim_e79ef1f534ee4decacfa0e3ceb1bc7cb",
-      "statement": ".dockerignore exclut uniquement .travis.yml et build.sh du contexte de build.",
-      "evidence": [
-        {
-          "resource": "repo://.dockerignore",
-          "version": "repo-file-v1:sha256:974d94c168f6bb7da1daf8fe6b8eedded10b95e911396739475db55e1da21a90"
-        }
-      ]
-    },
-    {
       "id": "claim_67257bb8bb574d3e8d09390f8a684e4b",
       "statement": ".gitattributes force des fins de ligne LF pour les fichiers texte.",
       "evidence": [
@@ -135,10 +125,38 @@
           "version": "repo-lines-v1:sha256:4304126b59b7aa5b7f0ad7d1d7b7dd91c9a4655db99ff1c54f1a735ab495a33e:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDYwZjM1MmQwZGIxNDA0YzcwYWZiNGJiOGIyY2EzZmQxYzYxMDU3MmFhNDA3MjBlOGEwYjdiYWE3ODg1NDE4YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzdmNTRiNmFlNTFhZmFiOGMxNGEyMjMyYTczMGZjOTFhOTM2MWZmOGIzN2QwN2U1ODY0OTE4NWRjYTI0MjQzOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         }
       ]
+    },
+    {
+      "id": "claim_4683cdbd1e1b4c468fa0f2e879f71b9e",
+      "statement": "qstat, nagiosgraph et les six collections de plugins tiers sont clonés puis figés sur un commit précis par git checkout dans le Dockerfile.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L104-L105",
+          "version": "repo-lines-v1:sha256:02488ff0ffa1b6b621eba3fc3a824f0ceac74bcd8ea0690b1ca5616902fc56b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGYxNjI1MzJmNjBmNTdhY2ExYTVjZjhjMzczNzk4M2I3NDYyYzc0YTAyMzQxODQ2MzFiOTBkM2Y3ZjAxNjk3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU2OWY1ZDBkMjZmOGQ1M2YyOThhMmI0NjlhOWZhYWJmNWMzOGM5NDk2MDYxMGExZDAzNTdmNjU3ZjdkODFhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjMzYTFjNDkwMTgyODk5NjA3ZWZjZDgwMGEyMmY0YWQ3Y2RlMDc1NmJiZGM3MWQ4MTk4NTFmNzBlNzc0NGJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQ0MDBmMDE5MDU3NDI0NjI3NmFhNzIwNmUwMjczODdmNTA1NzkxNjRlMDQwNWI1ZjJiZmU5OGZkOTY3MTI2MiJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L184-L185",
+          "version": "repo-lines-v1:sha256:c49e3d7ba39f1a4e80cdcf1d84a9ecf5635bb0c6ee3f3f19f4513c349755528a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ5OWFjZDQxNDBlMGNlMjcxNDI2NTlhOTc2MWQ2OGZjMmJmNDk5OWM2MThmMTgwMGNmNzcxMmFmOWYxNzAwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWZlNTNmMDAxNGJhYzQ4M2VmMjA0YWM4YjdhOWUxODg0OTE1ZjUxYzg1MTAzZjA1MWUxZGI0YTk4NDc3ZmQ4ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDUzZGJjZDEzMzc2ODJkMmExNTNiYTBkYmE1NjZlNWViMmEyODkwMGNiYjBiOWIzYmRjNTRiMWQxNDEwZWQ4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTBiNjM1Yjk1OTk3YTc4M2VkYWMwZGUyOGM1NjVmZDdkNzdiYjM2YmE2ZWM2ZGJiMzhlMGYzOGM5MzY0ZjZjNCJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L198-L203",
+          "version": "repo-lines-v1:sha256:3da8a3020f7f1cda69480ee0a8acec2cbda79cb0eac5ff34b7d857ca603ee959:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjMGIyOGQ5ZmQ2YjQ5OWQ5NzFjZWE2YTM2MTQ5NmQ1NDRkZDcxMjY1ZjBjZTI5Yzk2MzE1NDY2Y2JiOWUyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkNWJhNjljMDdiMjk5M2VmNGJhNDFhMWJlYjE1MzAzMmNjNGU3ZTU5ODBlMzIxYjk5NDA4ZjI5NDYzMDE4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDQwMmQ4ZWRlNDlhZWMxZGRlZTgwY2NhYzA4ZGFkZTA2ZDg2ZTg3MDYzZDg2NTRhY2Y3YTdkMzBiMjE0NzY4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTA4ODNlMDE2YjljMWM1NTU4NDJhNTU4YTg3ZjgwY2M4Y2YwNzI0OGZkNDhmZWY4OWJhYTEwN2M1OTczZTFjMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3bcc0274214a49e09109e7581d0ac59e",
+      "statement": "Le dépôt n'a plus de fichier .dockerignore ; tout le dépôt fait partie du contexte de build.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile",
+          "version": "repo-file-v1:sha256:5cc98e3669a7e554614b6af3c5c179571240c8e286992f514a0bfd018e39ae30"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.7.2",
-    "at": "2026-10-21T14:42:04.315Z"
+    "at": "2026-10-27T19:16:56.093Z"
   }
 }

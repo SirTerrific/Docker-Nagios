@@ -3,9 +3,6 @@ type: configuration
 title: Configuration Nagios fournie
 description: Contenu et intention des fichiers Nagios d'exemple livrés dans l'overlay — nagios.cfg, cgi.cfg et objets (localhost, commandes, modèles) — et leur lien avec nagiosgraph et le pipe de commandes externes.
 tags: [nagios-config, nagios-cfg, cgi-cfg, objects, perfdata]
-verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
 sources:
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
@@ -20,6 +17,9 @@ sources:
   - id: openwiki-source-69961be34500329ae74ec6e2
     resource: repo://overlay/opt/nagios/etc/objects/templates.cfg
 generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+verified:
+  - by: openwiki/0.7.2
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Configuration Nagios fournie

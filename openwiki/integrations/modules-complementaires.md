@@ -3,9 +3,6 @@ type: integration
 title: Modules complémentaires
 description: Composants ajoutés autour de Nagios Core — nagiosgraph (chaîne perfdata, CGI, correctif), NagiosTV, clients NRPE et NCPA, démon NSCA, collections de plugins tiers, qstat — et le correctif check_ifstatus présent mais non appliqué.
 tags: [nagiosgraph, nagiostv, nrpe, ncpa, nsca, plugins]
-verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-21T14:42:04.315Z
 sources:
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
@@ -13,7 +10,10 @@ sources:
     resource: repo://overlay/opt/nagiosgraph/etc/fix-nagiosgraph-multiple-selection.sh
   - id: openwiki-source-0f9ac0236e0f2ca44d2742be
     resource: repo://patches/nagios-plugins-2.4.0_check_ifstatus.patch
-generated: { by: "claude-code", at: "2026-10-21T14:42:04.315Z" }
+generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+verified:
+  - by: openwiki/0.7.2
+    at: 2026-10-27T19:16:56.093Z
 ---
 
 # Modules complémentaires
@@ -22,7 +22,7 @@ Tous ces composants sont installés au build par le `Dockerfile` (voir [Construc
 
 ## nagiosgraph
 
-**Installation.** Le dépôt SourceForge est cloné sans version fixée, puis installé par `install.pl --install --prefix /opt/nagiosgraph`. L'utilisateur Nagios et l'utilisateur web sont `nagios`, et le fichier perfdata est `/opt/nagios/var/perfdata.log`. Les variables `NG_CGI_DIR=/opt/nagios/sbin`, `NG_WWW_DIR=/opt/nagios/share/nagiosgraph` et `NG_CGI_URL=/cgi-bin` placent les CGI de nagiosgraph à côté de celles de Nagios. Elles sont donc servies sous `/cgi-bin/` (par exemple `/cgi-bin/show.cgi`). Le fichier `share/nagiosgraph.ssi` est copié comme `common-header.ssi` de Nagios. Il injecte dans toutes les pages Nagios le JavaScript de l'info-bulle des graphes.
+**Installation.** Le dépôt SourceForge est cloné et figé sur un commit précis (`git checkout`), puis installé par `install.pl --install --prefix /opt/nagiosgraph`. L'utilisateur Nagios et l'utilisateur web sont `nagios`, et le fichier perfdata est `/opt/nagios/var/perfdata.log`. Les variables `NG_CGI_DIR=/opt/nagios/sbin`, `NG_WWW_DIR=/opt/nagios/share/nagiosgraph` et `NG_CGI_URL=/cgi-bin` placent les CGI de nagiosgraph à côté de celles de Nagios. Elles sont donc servies sous `/cgi-bin/` (par exemple `/cgi-bin/show.cgi`). Le fichier `share/nagiosgraph.ssi` est copié comme `common-header.ssi` de Nagios. Il injecte dans toutes les pages Nagios le JavaScript de l'info-bulle des graphes.
 
 **Chaîne de données.**
 
@@ -47,7 +47,7 @@ L'archive de release `nagiostv-${NAGIOSTV_VERSION}.tar.gz` est téléchargée de
 ## Plugins
 
 - **Nagios Plugins** officiels (`$NAGIOS_PLUGINS_BRANCH`) dans `/opt/nagios/libexec`. `check_icmp` est setuid root.
-- **Collections tierces** clonées sous `/opt` sans version fixée : `WL-Nagios-Plugins`, `JR-Nagios-Plugins`, `JE-Nagios-Plugins`, `nagios-mssql`, `jpmens-mqtt`, `DF-Nagios-Plugins`. Seuls quelques plugins sont copiés dans `libexec` : `check_mem.pl`, `check_mssql_database.py`, `check_mssql_server.py`, `check-mqtt.py`, `check_sql`, `check_jenkins` et `check_vpn`. Les autres sont appelés par leur chemin sous `/opt`. Les dépendances Python `pymssql` et `paho-mqtt` sont installées par `pip --break-system-packages`.
+- **Collections tierces** clonées sous `/opt` et figées chacune sur un commit précis : `WL-Nagios-Plugins`, `JR-Nagios-Plugins`, `JE-Nagios-Plugins`, `nagios-mssql`, `jpmens-mqtt`, `DF-Nagios-Plugins`. Seuls quelques plugins sont copiés dans `libexec` : `check_mem.pl`, `check_mssql_database.py`, `check_mssql_server.py`, `check-mqtt.py`, `check_sql`, `check_jenkins` et `check_vpn`. Les autres sont appelés par leur chemin sous `/opt`. Les dépendances Python `pymssql` et `paho-mqtt` sont installées par `pip --break-system-packages`.
 - **qstat** est compilé depuis `multiplay/qstat` (vérification de serveurs de jeux).
 
 ## Correctif `check_ifstatus` non appliqué
