@@ -91,6 +91,7 @@ RUN echo postfix postfix/main_mailer_type string "'Internet Site'" | debconf-set
         snmp                                \
         snmpd                               \
         snmp-mibs-downloader                \
+        tcsh                                \
         unzip                               \
                                                 && \
     apt-get clean && rm -Rf /var/lib/apt/lists/*
