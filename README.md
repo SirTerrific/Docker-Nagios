@@ -38,6 +38,14 @@ NagiosGraph configuration lives in /opt/nagiosgraph/etc
 docker pull ghcr.io/sirterrific/docker-nagios:latest
 ```
 
+Image tags published on every build of `master`:
+
+| Tag | Meaning |
+|-----|---------|
+| `latest` | Most recent build (moves) |
+| `4.5.14` | Latest build for that Nagios Core version (moves with weekly rebuilds) |
+| `4.5.14-YYYYMMDD-<sha7>` | One specific build (never overwritten): pin this one in production |
+
 ### Running
 
 Run with the example configuration with the following:
