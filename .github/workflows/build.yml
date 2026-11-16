@@ -4,6 +4,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * 1'
 
 permissions:
   contents: read
@@ -15,7 +17,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Build image
-        run: docker build -t nagios-ci:${{ github.run_id }} .
+        run: docker build --pull -t nagios-ci:${{ github.run_id }} .
 
       - name: Start container
         run: docker run -d --name nagios-ci-${{ github.run_id }} nagios-ci:${{ github.run_id }}
@@ -42,7 +44,7 @@ jobs:
 
   publish:
     needs: build-test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: (github.event_name == 'push' || github.event_name == 'schedule') && github.ref == 'refs/heads/master'
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -57,6 +59,6 @@ jobs:
         run: |
           image=ghcr.io/${GITHUB_REPOSITORY,,}
           version=$(sed -n 's/^ENV NAGIOS_BRANCH *nagios-//p' Dockerfile)
-          docker build -t "$image:latest" -t "$image:$version" .
+          docker build --pull -t "$image:latest" -t "$image:$version" .
           docker push "$image:latest"
           docker push "$image:$version"
