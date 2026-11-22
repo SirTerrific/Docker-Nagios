@@ -12,8 +12,8 @@ sources:
     resource: repo://patches/nagios-plugins-2.4.0_check_ifstatus.patch
 generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
 verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T19:16:56.093Z
+  - by: openwiki/0.9.0
+    at: 2026-11-22T14:35:39.579Z
 ---
 
 # Modules complémentaires

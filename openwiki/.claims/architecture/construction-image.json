@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:8e408f8c35229b8f7f57a4222a5bfc3efcab0eee7c9887ed975b55012f69a095",
+  "pageVersion": "sha256:a292786970e13731257bee5a4f6a44e9acd7f6c7e640e6f30d3fbf5a4fc3f8fa",
   "claims": [
     {
       "id": "claim_bb9c72d4cd224eb0b743118c185b79dc",
@@ -17,7 +17,7 @@
       "statement": "Le groupe nagios est créé avec le GID 1001 et l'utilisateur nagios avec l'UID 997.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L98-L101",
+          "resource": "repo://Dockerfile#L99-L102",
           "version": "repo-lines-v1:sha256:1cff1b5e45de0a40f97bdb7969a9830cabc94c31650fbd32bb9b8e3cbad333ff:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmQyOWUzMjI1MTBhMGRlMmZlODgwYzJjYTlmYjQ3ZWI2NTFjNmE5NWY3MzdmZGE5OThiYTYzOTcxMTQwYmM3OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjZjYmYwM2U5NjhlMzBjY2I0YzhhZWJkOTgxOTBmYTcwNWU3MjFjZTkzNTI4OWI3NjBhMGVhMjZmZWIwMTQ1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjhmYjQ1NDc0MzUwZjA3ZjZlN2Y3MzNjMDdmMTAyMzA1ZWU5OWRhMWU4MWJkNWNlOTQ1NWJhNmEzMDExYzBhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjA0NzMxMTcxMWE2N2MwNDVmYzI4OWZmODk0ZWU1NWIzMTVlYjc2OTNhYjI4NzdhMmM2M2VlY2Q1NmJhYjc5ZCJ9"
         }
       ]
@@ -27,7 +27,7 @@
       "statement": "Nagios Core est compilé depuis NagiosEnterprises/nagioscore au tag $NAGIOS_BRANCH avec --prefix=/opt/nagios et --enable-event-broker, puis installé avec make install, install-config, install-commandmode et install-webconf.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L113-L131",
+          "resource": "repo://Dockerfile#L114-L132",
           "version": "repo-lines-v1:sha256:9bdb519b5adf99a2bfab7d2198ac1d617a5ea3a0247f062a4d20732b49260e6c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxYzRkZDFjYTMyMTIwNWUyYWFlZGU0OWVmMDlhYTkwN2VmZDRiMzc4NGExNmY2YTBhNWYyNjA2MmFiOTNkNWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhYjk2OGFhNDY5OGFlOTgwNTRkMjFiMTdiZTg2YjA5ODgxNzdmZGUxMzkxODQ0ZjQzZDJjY2ViNTUyMzQ2ZDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFlMjY2YjczODQ4MzhjMGYzZGY0MmFiZmRiNTU2YmRjOWY4MzhiN2UyMDE3NDJiNWM2Nzc3NTg3ZTFiNjcwNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3ZjY5YzlmZDYyY2UyMDc2OWNjOGI0ZDY0NDI3ZWYyMWExNjUxNTIzYmRjZTRjOTRkYWJkNDU0NzVkODkzMzMifQ"
         }
       ]
@@ -37,7 +37,7 @@
       "statement": "check_icmp reçoit le bit setuid root et utils.pm est lié dans /usr/lib/nagios/plugins.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L146-L149",
+          "resource": "repo://Dockerfile#L147-L150",
           "version": "repo-lines-v1:sha256:c539fc75902b0d5a7cdcf4bfcacc7376eb671101e2d257d200aba40b2cfca5f8:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOGFiZGY1YzA1YmNjODUzNWMzYzU1ZTQ2ZGY0YzM4MmZiMmNkNzU3NDYxODJhNDYzYmI0YThjMmRkNjUzODExZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjQyNzVjOGViM2UyNmRmZjY3MmI3MDc3M2Q0ZDE4YTM1OTI2ZTY3NGJmYTFkMTI2MGUxNTgzZmZlMzE2MWMxZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2JmMThlOTE0MDBmYmJjZWE3ZmU5ZjE1MDZkZGM5ZmFkNDI5NDkyMDFhOTQyYWI2ZWFlMTU1ZGU0OWVjZGZhMSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzU1OTFhNTgzMTgzOWMyNDhjYzY1Mjg5MWFmYTk1MDQwNDc1Njc3MmIxZjI2YWNhNGVjN2JhOTZhOTMzNGU5MiJ9"
         }
       ]
@@ -47,7 +47,7 @@
       "statement": "Seul check_nrpe est compilé pour NRPE, avec une bibliothèque SSL située dans /usr/lib/x86_64-linux-gnu.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L155-L165",
+          "resource": "repo://Dockerfile#L156-L166",
           "version": "repo-lines-v1:sha256:6976670abe8ed9ed17eac82d52dc34ede7b8cf2c46a24d86e3d3390e3dc17ab5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlMmVmZWE2MmE4YmYzZTBiMzdkNzVhNmJhNDRhYzdhM2FhODI2MWJjM2Y3OGZjZGZkOGFhOTU3MDM1NzQ1ZjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NTU2M2IxYTY0Mjg3MjA2M2MyODczMDllODA5MmIxYzk0ZmMwMWZkZmNmNzk1YzNhZmZjYmQzOWQ5OTZhMmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFhMjQ4N2NhMzU2M2FmOGRiMmQ4MWRjNWRiMGY4ODlhYTYxYWMxYThkNzczZjM3YWJjOWFlOWI5NDQ3Zjg3NWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI4N2YxNDU2MTM1MTMwOWU3NTk2NWY1MjFmMzkyODRmNWI5YTczNDIwYWMxNjBkMWFkYTc2ODdjOGYxNTFmYWMifQ"
         }
       ]
@@ -57,7 +57,7 @@
       "statement": "NSCA est compilé au tag $NSCA_BRANCH et son nsca.cfg est modifié pour écouter sur 0.0.0.0.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L167-L181",
+          "resource": "repo://Dockerfile#L168-L182",
           "version": "repo-lines-v1:sha256:0634fd3282e89b8a8ab4fd3b7b22e76f9cc165b4d680b6db96f42acfdc823472:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3YWE1YWM0MzY0NjYxZjI2OWUxMmI2MGViMDkxMjMxNDIxODFiZmNmYjcxMWU0MmFlMTVjMTliOGJkYTFlNTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1ZWRkNTE5NzUyZDhlYjhlNGExYzJhOWU1MTlkMmU4YWY2OTRlYTVlMzhkOWUwNjI0Mzk2NDQ0YmM0YzZlYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1OTkyYmJjZDU5MzA2MDAxYTZkOThhZWQ4MGRhODY3MWMxZWFiMWY3ZjI5YWFjYWQwOGMxNzE2YmY3OGNkMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkZmVjYjY3Y2E2YjAzYWFmYTJlYTZmZjk0NTI1NjMwMDQ1ZTJhMGRkYjhkMjdmMDc3M2U1YTE5ODFhYTAzYjEifQ"
         }
       ]
@@ -67,11 +67,11 @@
       "statement": "Apache sert /opt/nagios/share comme DocumentRoot, avec /cgi-bin/ en ScriptAlias vers /opt/nagios/sbin/, et les modules session, session_cookie, session_crypto, auth_form et request sont activés.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L223-L227",
+          "resource": "repo://Dockerfile#L224-L228",
           "version": "repo-lines-v1:sha256:7c1f0e3e80c967a33e4e8accbe53c165e88ed61f37a152c58215552b4bde6068:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWI0YjAwMTU4YTZmYWRjOGY4YThhYjZlMDQyZjM5ZDQ2NTg3OWJjYTUzZjczNTlkNWEzODZlM2RkMGRkZGRhZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDYwM2YwYWZlNjI2Y2RmMGUzYmJjNjJkZGY2ZTIxZGIzYjhmN2M4NjIyYzlkMDRjMzU1NTU2YzI5MzEzZDNlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDFlNDQ3Zjc4ZDYwMjA1ODYxYTc4YjUzNmQ0NTZiYjA4YWI5MDYxNzAxZGY4MjFjNWY3OTExYzA3NGMzY2MxYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGE5ODliZDAxN2NhMjllYzNlZjIxZjQ3NWQ0MDY3MDhmMzI0MGY3N2ZjNDQ5MGJhYzhiODU5OWRhODdhNDc0YSJ9"
         },
         {
-          "resource": "repo://Dockerfile#L269-L273",
+          "resource": "repo://Dockerfile#L270-L274",
           "version": "repo-lines-v1:sha256:01516e7c8e15c26b1ec30b8237e668f7cdf27f36e6f25200f3f8651b1502d200:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNmYyNmFjOWJiMjIwODIzZWNhY2I1Y2U4MDhjNDc0ODBhZDUzNjNlYjJjNjkxNzMzZmU3MWRkZWMxOWQxMDU2MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk2OTNlNDRjYjQ5YzE0ZmE2YTIxMjM3ZWRkODVlYjQxYzNmNmNjNTY1ZDYxYTdhNDhkNGVjODNkZGZiMWE1YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmMxMDllMzE5M2Q2ZDdmZmU3YjdmZjMyZjdlNTRiZDIzODk1MTMzYTk2YjdjMDU2M2NiZDk3ZGRhYjQzYzcxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmY1MDYyNzJhYjg2MGU3YjdiZmFhYTU0NmJkNTM2Yjc0MjlhNDZkMTBiZjI2N2I1NmI5M2FlODY4MTZlZGNhNyJ9"
         }
       ]
@@ -81,7 +81,7 @@
       "statement": "L'overlay est copié sur / puis use_timezone=${NAGIOS_TIMEZONE} est ajouté à nagios.cfg au moment du build.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L249-L251",
+          "resource": "repo://Dockerfile#L250-L252",
           "version": "repo-lines-v1:sha256:6dc84f3c403eed2ab3749958167f71a9714027cf45805f21a7e7e792210a0162:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTk0ODhjYmQ0YjVmYjJmZTAyMmUzZGQwZTU2ZTJiODg1ZGJmMWNlYTcyNzQ5Y2Q1YjY5M2YyZmM1ZjU3ZDIxYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOWZhMmIxNDZjYjI4Yjk4Y2Y1OWQ2OTdhNWMxZDZhNjZmYmVlZmEzNmQyYmU5MmE0OGM2MzA5ZTZiMTRiNjhmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmI2NmZiNTcyMTg0NDgwNzdhODZhMzFlMTUzYTg4OWYwNmFlNDY3MDIzZjgxNmNkN2M5YjM5YzlmMTkzNTM5MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTkwNzMwZmM1MDkxZTJkNWEyMTU1MjBiNGY3MzEwYTU5MmFkMWQzZmJlZWIwNjAwM2I3NmYzNjRiZmU0ODIxZiJ9"
         }
       ]
@@ -91,7 +91,7 @@
       "statement": "Les répertoires etc et var de Nagios et de nagiosgraph sont copiés dans /orig/etc, /orig/var, /orig/graph-etc et /orig/graph-var pendant le build.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L256-L263",
+          "resource": "repo://Dockerfile#L257-L264",
           "version": "repo-lines-v1:sha256:c6b6872c416771f8ce08d79f88b124c2e887bb3fba7660f197e26bae61fa734f:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTUyOWI1NmJiNTE3YmFiZTllODdmYjdhYmZjOGJkM2JiZTE2ZmRkMjRlN2EyMWJjMDcwZWI1OGQxNGNhMzI3NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY0NjA1YjZkNjY1YTVhMzViYTU5MWU1MWQyZjBkZDAwN2M5ZjM4YWU1YzIxMmM4N2Y2ZjcyYzAxODdlODNkMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODQ4NTc0OWUwYTRkZGM1MGYxOWY3NWIxNzI4Y2U4ODViNjI0ZTUyNTY4YmQ0NWVjY2NiNzQ5OTQyNDA1ZTc5NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTkzMjEzZTQxZjhkMTZlNTc0Yzg1ZWUzN2JkN2JiZGI0Y2U0ODc2YzI5OGE3YWZmOGFkN2I5ODk5NjZkZDhjZSJ9"
         }
       ]
@@ -101,7 +101,7 @@
       "statement": "Les scripts run de l'overlay, dont /etc/sv/nsca/run, sont rendus exécutables et tous les services /etc/sv/* sont liés dans /etc/service.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L275-L289",
+          "resource": "repo://Dockerfile#L276-L290",
           "version": "repo-lines-v1:sha256:23b55673f22ba29fdfb502249b22b1051a2a37797878aff1d428263780c43c4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmZDNhMmM2NjI3ZTdlMzM2ZmQzZDczMGQ4NGNhNmQxYTdlOTFiZWIxYWQ5MjY2ZmZhYTEwMjdkMjFhZmQwMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhZjRjZTgyNDE0NjA3NjRmOGYwOTJlZjM4OTE0NTAwMjZiNzdjYTUxY2E2YTM1ZDJlYThkMjJjODY3YWU1ZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNmMTFmZDQ1YjkyZjVjY2M5YWFkNDNmYjEyNzEzZTI5ODMzNGU1NTI3NmQwNGI5MmFkOTQwZTg4NmE0ZjJjN2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBmMjUxMmM5ZjMzYTU0Y2Y5NGU1MTFkN2IzZDk2ZDcyOWM4NTRjNjc5NzU0Y2QyYzU5ZmE1ZTkzODY0Yzg0NGUifQ"
         }
       ]
@@ -111,7 +111,7 @@
       "statement": "L'image expose les ports 80 et 5667, déclare six volumes et lance /usr/local/bin/start_nagios.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L303-L307",
+          "resource": "repo://Dockerfile#L304-L308",
           "version": "repo-lines-v1:sha256:5f58e16c2553a6797b350aa78965814673501c97b1ad1f3814f3d95a554f63d4:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYmI5NGEwNWVhYzNhNjVmNDBmNzI3MGRlMWM3NGJiMTBkNjYxZTkwYTNjZDUxMjZjNzM0N2NiNDgyNGE5ZGE3YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGUwNDgwYThmNTFmZmQ4NWYyYzkwMDZiMWI0OTI3ODA2NTNkZTY1M2EyZmQ5NmY1NWQ4ZmQ1NmFjNzU3NDBmMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTliOTBmN2Y5YWU5MTVmM2M2MDY2MmVlMWJhN2ViZjY1Yjg4N2RhZDJkYmQwM2E0NTVlODMxMmEyYzU0NWY4MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
         }
       ]
@@ -131,15 +131,15 @@
       "statement": "qstat, nagiosgraph et les six collections de plugins tiers sont clonés puis figés sur un commit précis par git checkout dans le Dockerfile.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L104-L105",
+          "resource": "repo://Dockerfile#L105-L106",
           "version": "repo-lines-v1:sha256:02488ff0ffa1b6b621eba3fc3a824f0ceac74bcd8ea0690b1ca5616902fc56b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGYxNjI1MzJmNjBmNTdhY2ExYTVjZjhjMzczNzk4M2I3NDYyYzc0YTAyMzQxODQ2MzFiOTBkM2Y3ZjAxNjk3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU2OWY1ZDBkMjZmOGQ1M2YyOThhMmI0NjlhOWZhYWJmNWMzOGM5NDk2MDYxMGExZDAzNTdmNjU3ZjdkODFhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjMzYTFjNDkwMTgyODk5NjA3ZWZjZDgwMGEyMmY0YWQ3Y2RlMDc1NmJiZGM3MWQ4MTk4NTFmNzBlNzc0NGJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQ0MDBmMDE5MDU3NDI0NjI3NmFhNzIwNmUwMjczODdmNTA1NzkxNjRlMDQwNWI1ZjJiZmU5OGZkOTY3MTI2MiJ9"
         },
         {
-          "resource": "repo://Dockerfile#L184-L185",
+          "resource": "repo://Dockerfile#L185-L186",
           "version": "repo-lines-v1:sha256:c49e3d7ba39f1a4e80cdcf1d84a9ecf5635bb0c6ee3f3f19f4513c349755528a:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODQ5OWFjZDQxNDBlMGNlMjcxNDI2NTlhOTc2MWQ2OGZjMmJmNDk5OWM2MThmMTgwMGNmNzcxMmFmOWYxNzAwNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNWZlNTNmMDAxNGJhYzQ4M2VmMjA0YWM4YjdhOWUxODg0OTE1ZjUxYzg1MTAzZjA1MWUxZGI0YTk4NDc3ZmQ4ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDUzZGJjZDEzMzc2ODJkMmExNTNiYTBkYmE1NjZlNWViMmEyODkwMGNiYjBiOWIzYmRjNTRiMWQxNDEwZWQ4MCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTBiNjM1Yjk1OTk3YTc4M2VkYWMwZGUyOGM1NjVmZDdkNzdiYjM2YmE2ZWM2ZGJiMzhlMGYzOGM5MzY0ZjZjNCJ9"
         },
         {
-          "resource": "repo://Dockerfile#L198-L203",
+          "resource": "repo://Dockerfile#L199-L204",
           "version": "repo-lines-v1:sha256:3da8a3020f7f1cda69480ee0a8acec2cbda79cb0eac5ff34b7d857ca603ee959:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjMGIyOGQ5ZmQ2YjQ5OWQ5NzFjZWE2YTM2MTQ5NmQ1NDRkZDcxMjY1ZjBjZTI5Yzk2MzE1NDY2Y2JiOWUyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkNWJhNjljMDdiMjk5M2VmNGJhNDFhMWJlYjE1MzAzMmNjNGU3ZTU5ODBlMzIxYjk5NDA4ZjI5NDYzMDE4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDQwMmQ4ZWRlNDlhZWMxZGRlZTgwY2NhYzA4ZGFkZTA2ZDg2ZTg3MDYzZDg2NTRhY2Y3YTdkMzBiMjE0NzY4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTA4ODNlMDE2YjljMWM1NTU4NDJhNTU4YTg3ZjgwY2M4Y2YwNzI0OGZkNDhmZWY4OWJhYTEwN2M1OTczZTFjMCJ9"
         }
       ]
@@ -150,13 +150,27 @@
       "evidence": [
         {
           "resource": "repo://Dockerfile",
-          "version": "repo-file-v1:sha256:5cc98e3669a7e554614b6af3c5c179571240c8e286992f514a0bfd018e39ae30"
+          "version": "repo-file-v1:sha256:1872997c4d6c231f4c62343803c94061db79f1b57b3f27c674e115a28beb2a2b"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa606ba1fb334fcb9a0367085bdac9de",
+      "statement": "Le build exécute apt-get update && apt-get upgrade -y avant d'installer les paquets, et installe tcsh.",
+      "evidence": [
+        {
+          "resource": "repo://Dockerfile#L31-L31",
+          "version": "repo-lines-v1:sha256:5205a02cd41ddaaf1c3aa685f29222f1acb57ef8092744f9a82de0a53bba3584:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTIwNWEwMmNkNDFkZGFhZjFjM2FhNjg1ZjI5MjIyZjFhY2I1N2VmODA5Mjc0NGY5YTgyZGUwYTUzYmJhMzU4NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTIwNWEwMmNkNDFkZGFhZjFjM2FhNjg1ZjI5MjIyZjFhY2I1N2VmODA5Mjc0NGY5YTgyZGUwYTUzYmJhMzU4NCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGIwNjhmZDE5YzU0MzMxMTNjMzI3OWUxZWFjN2MyMjkyZmZlMmRiMTgwNzNmZWY1MDE5MWRiNGUzNTgzZmYzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGFkYjU5ZjQzZDc5MjYyOWU0ZDEyMGZkZmZjM2FlMmI4OWEwOGRhMDM4MzBiMTNkMjJkNWJmYmRiMWU2YWYwMyJ9"
+        },
+        {
+          "resource": "repo://Dockerfile#L94-L94",
+          "version": "repo-lines-v1:sha256:08066be526ba9965e499358169657c95d905be2b689bad47c153d0a4a56b6fd4:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDgwNjZiZTUyNmJhOTk2NWU0OTkzNTgxNjk2NTdjOTVkOTA1YmUyYjY4OWJhZDQ3YzE1M2QwYTRhNTZiNmZkNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDgwNjZiZTUyNmJhOTk2NWU0OTkzNTgxNjk2NTdjOTVkOTA1YmUyYjY4OWJhZDQ3YzE1M2QwYTRhNTZiNmZkNCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGI1NWFhMjkxNjEyNDgzMzA3NGFhMDk3MjE2MWQyNmEwODIzZTlmNTBhNzUzMzg3YzYxZWQ3N2QyYjc1YmZjMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjMxYWFkMzA3YzM5YmIyMWM2ZDMyM2Q4NmQxNTFkODUyYWE4N2U0MWFiOTBjMTQ0ZWQ2MmNjYjdmMmYyOGViYyJ9"
         }
       ]
     }
   ],
   "verification": {
-    "by": "openwiki/0.7.2",
-    "at": "2026-10-27T19:16:56.093Z"
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-22T14:35:39.579Z"
   }
 }

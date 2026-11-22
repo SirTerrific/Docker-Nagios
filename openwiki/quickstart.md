@@ -14,10 +14,10 @@ sources:
     resource: repo://SECURITY.md
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+generated: { by: "claude-code", at: "2026-11-22T14:35:39.579Z" }
 verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T19:16:56.093Z
+  - by: openwiki/0.9.0
+    at: 2026-11-22T14:35:39.579Z
 ---
 
 # Démarrage rapide
@@ -47,7 +47,7 @@ bash tests/smoke.sh nagios
 
 L'interface est servie sur `http://localhost:8080/nagios/` (identifiants par défaut `nagiosadmin` / `nagios`). NagiosTV est sous `/nagios/nagiostv/`, et les graphes sous `/cgi-bin/show.cgi`.
 
-L'image est publiée sur `ghcr.io/sirterrific/docker-nagios`, avec les tags `latest` et la version de Nagios Core (par exemple `4.5.14`). La publication a lieu à chaque push sur `master`, après réussite du test de fumée et du test de migration.
+L'image est publiée sur `ghcr.io/sirterrific/docker-nagios`, avec les tags `latest`, la version de Nagios Core (par exemple `4.5.14`) et un tag immuable `<version>-AAAAMMJJ-<sha7>`. La publication a lieu à chaque push sur `master`, après réussite du test de fumée et du test de migration, ainsi que chaque lundi à 04:00 UTC ou sur déclenchement manuel : cette reconstruction applique les correctifs de sécurité Ubuntu (`apt-get upgrade`).
 
 ## Quelle page lire ?
 
