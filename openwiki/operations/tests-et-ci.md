@@ -14,10 +14,10 @@ sources:
     resource: repo://tests/migrate.sh
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+generated: { by: "claude-code", at: "2026-11-22T14:35:39.579Z" }
 verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T19:16:56.093Z
+  - by: openwiki/0.9.0
+    at: 2026-11-22T14:35:39.579Z
 ---
 
 # Tests et intégration continue
@@ -46,7 +46,7 @@ Le script affiche `PASS:`/`FAIL:` pour chaque contrôle, se termine par `ALL TES
 
 ## Workflow GitHub Actions `build-test`
 
-`.github/workflows/build.yml` se déclenche sur `push`, `pull_request` et `workflow_dispatch`, sur `ubuntu-24.04`. Étapes :
+`.github/workflows/build.yml` se déclenche sur `push`, `pull_request`, `workflow_dispatch` et chaque lundi à 04:00 UTC (`schedule`), sur `ubuntu-24.04`. Étapes :
 
 1. construction de l'image `nagios-ci:<run_id>` ;
 2. démarrage du conteneur `nagios-ci-<run_id>` ;
@@ -61,11 +61,11 @@ Le workflow déclare `permissions: contents: read` au niveau racine : le `GITHUB
 
 ### Publication sur ghcr.io
 
-Le job `publish` dépend de `build-test`. Il ne s'exécute que sur un `push` vers `refs/heads/master` : les pull requests ne publient rien. Il reçoit `contents: read` et `packages: write`. Étapes :
+Le job `publish` dépend de `build-test`. Il ne s'exécute que sur `refs/heads/master`, pour un `push`, le `schedule` hebdomadaire ou un `workflow_dispatch` : les pull requests ne publient rien. Il reçoit `contents: read` et `packages: write`. Étapes :
 
 1. connexion à `ghcr.io` avec `GITHUB_TOKEN` et l'acteur du workflow ;
-2. construction de l'image `ghcr.io/<dépôt en minuscules>` avec deux tags, `latest` et la version extraite de `ENV NAGIOS_BRANCH` (par exemple `4.5.14`) ;
-3. `docker push` des deux tags.
+2. construction de l'image `ghcr.io/<dépôt en minuscules>` avec `docker build --pull` et trois tags : `latest`, la version extraite de `ENV NAGIOS_BRANCH` (par exemple `4.5.14`) et un tag immuable `<version>-AAAAMMJJ-<sha7>` ;
+3. `docker push` des trois tags.
 
 ### Exécution locale avec act
 

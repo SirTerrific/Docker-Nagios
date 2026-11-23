@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:dca64f0d6afb0df91d8e98863ece284cb9b074094a9ac2f6bccd171aa30ee2c0",
+  "pageVersion": "sha256:091871169b6711a89d625872442d03a2dff6b298269e236de94a1f04dc3c7e86",
   "claims": [
     {
       "id": "claim_51e4dd4d49e344c3bc8554673abdd52b",
@@ -18,7 +18,7 @@
       "evidence": [
         {
           "resource": "repo://Dockerfile",
-          "version": "repo-file-v1:sha256:5cc98e3669a7e554614b6af3c5c179571240c8e286992f514a0bfd018e39ae30"
+          "version": "repo-file-v1:sha256:1872997c4d6c231f4c62343803c94061db79f1b57b3f27c674e115a28beb2a2b"
         },
         {
           "resource": "repo://README.md#L9-L16",
@@ -31,7 +31,7 @@
       "statement": "L'étape NSCA fait son checkout sur $NSCA_BRANCH.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L167-L170",
+          "resource": "repo://Dockerfile#L168-L171",
           "version": "repo-lines-v1:sha256:9aa321ef41b6175ec586d43975d14a003ae3de369ea2b68a9101d8a1f84f8030:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdhYTVhYzQzNjQ2NjFmMjY5ZTEyYjYwZWIwOTEyMzE0MjE4MWJmY2ZiNzExZTQyYWUxNWMxOWI4YmRhMWU1OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2E4NzFlODdhN2Y1YWRhZjZhYmEwOTcxZTVlMmZkNzQwZmFhMjYwOWI1YWU1Y2IxNDZkZTY4Y2Y1ZWUxM2NmZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTU5OTJiYmNkNTkzMDYwMDFhNmQ5OGFlZDgwZGE4NjcxYzFlYWIxZjdmMjlhYWNhZDA4YzE3MTZiZjc4Y2QwZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmZmMmY2NmQxNWE5YTM0ZDNjZGM4NDYwOGVhZWE0YjQyNDA5YjhmM2RmN2VlOTJlMWEzNzNlOTg2Mzk2OWI4YyJ9"
         }
       ]
@@ -71,18 +71,32 @@
       "statement": "Les dépôts tiers figés se mettent à jour en changeant le SHA passé à git checkout dans le Dockerfile.",
       "evidence": [
         {
-          "resource": "repo://Dockerfile#L104-L105",
+          "resource": "repo://Dockerfile#L105-L106",
           "version": "repo-lines-v1:sha256:02488ff0ffa1b6b621eba3fc3a824f0ceac74bcd8ea0690b1ca5616902fc56b2:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGYxNjI1MzJmNjBmNTdhY2ExYTVjZjhjMzczNzk4M2I3NDYyYzc0YTAyMzQxODQ2MzFiOTBkM2Y3ZjAxNjk3OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGU2OWY1ZDBkMjZmOGQ1M2YyOThhMmI0NjlhOWZhYWJmNWMzOGM5NDk2MDYxMGExZDAzNTdmNjU3ZjdkODFhZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjMzYTFjNDkwMTgyODk5NjA3ZWZjZDgwMGEyMmY0YWQ3Y2RlMDc1NmJiZGM3MWQ4MTk4NTFmNzBlNzc0NGJhYyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjQ0MDBmMDE5MDU3NDI0NjI3NmFhNzIwNmUwMjczODdmNTA1NzkxNjRlMDQwNWI1ZjJiZmU5OGZkOTY3MTI2MiJ9"
         },
         {
-          "resource": "repo://Dockerfile#L198-L203",
+          "resource": "repo://Dockerfile#L199-L204",
           "version": "repo-lines-v1:sha256:3da8a3020f7f1cda69480ee0a8acec2cbda79cb0eac5ff34b7d857ca603ee959:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWJjMGIyOGQ5ZmQ2YjQ5OWQ5NzFjZWE2YTM2MTQ5NmQ1NDRkZDcxMjY1ZjBjZTI5Yzk2MzE1NDY2Y2JiOWUyZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjhkNWJhNjljMDdiMjk5M2VmNGJhNDFhMWJlYjE1MzAzMmNjNGU3ZTU5ODBlMzIxYjk5NDA4ZjI5NDYzMDE4NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDQwMmQ4ZWRlNDlhZWMxZGRlZTgwY2NhYzA4ZGFkZTA2ZDg2ZTg3MDYzZDg2NTRhY2Y3YTdkMzBiMjE0NzY4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYTA4ODNlMDE2YjljMWM1NTU4NDJhNTU4YTg3ZjgwY2M4Y2YwNzI0OGZkNDhmZWY4OWJhYTEwN2M1OTczZTFjMCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_380eac1379124823b3a1ccbb94dd2b25",
+      "statement": "Le workflow de publication se lance chaque lundi à 04:00 UTC ou manuellement (workflow_dispatch), reconstruit l'image avec docker build --pull et pousse les tags latest, la version de Nagios Core et un tag immuable <version>-AAAAMMJJ-<sha7>.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/build.yml#L3-L8",
+          "version": "repo-lines-v1:sha256:82fe0876fc189d43f6d9e9a20978715a01f5c48570fb44e367651a331655a299:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTk2ZGM0ODE0OWY1YTgzZDFlZDZkYmIzOWJiYzdlMmI5MDJhYTNkMzRkNmJkNWFlNGIyOTFiNjhkZjBjYTc5YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTM3ZTk2NDMxOTNjNTk4OGFhNzJkOTcxOGZhODM3N2RmZTYxMjE1MDdmMWExM2E0YWE2N2RkYmQ5MjBhNjQxZCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZjNjZGU3NzIxOTM1NDk0YTdhMWY1NzBkYzdkMjJkZjg3ZjA3NWI4YTA5NWQzZDhkN2NlMzQyMzdkNGM3MWRiNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiN2UyNzQyMjRlOTgyODgxZDk4MWI4YWRkZmRkYzk4ODBiMmYxZDA3ODAzMTVkNzBkNWQ1MTkxYzc1Zjk1YTViMiJ9"
+        },
+        {
+          "resource": "repo://.github/workflows/build.yml#L47-L65",
+          "version": "repo-lines-v1:sha256:c4031400a46db4fbe01911f24e5365d17fc22797c675ea2ec503f1cca5c55cf2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwOTBkMDRiYjc5NjA5NzA5NzIyMjYyMDc3NDhjOTVhNTI4YzQ4OGU4MjY5MDM4ZjAyYTYyYzNmNzg5NmI4NGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0YTMwYmU1ZTFlMTllNmVlODFlZDY5ZDE3MzIxMTA4Mzk1YmYyMTNlZTU5M2E0ODgyNGQwMzA4ZjEwOWRmNzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU4MmVlOTg1ZTJjOTg5ZGNiYjY4YWVjNTY4YmQyZDg1YTA1ZDcxNWM2ZjI4OTIyMGFlMzg5YWExNjQzNmJjYmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg0Nzc0NDhkMmY4MDlhZWMwNGZjMDNiNjdiZDY0OWM1MjQ4OGYxNTE0NGYxZWJiZjkxMGY3YjcyZDI5MTg2NWYifQ"
         }
       ]
     }
   ],
   "verification": {
-    "by": "openwiki/0.7.2",
-    "at": "2026-10-27T19:16:56.093Z"
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-22T14:35:39.579Z"
   }
 }

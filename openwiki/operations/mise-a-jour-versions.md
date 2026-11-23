@@ -4,6 +4,8 @@ title: Mise à jour des versions
 description: Procédure pour monter les versions de Nagios Core et de ses composants dans le Dockerfile sans casser les installations existantes, avec les points de contrôle et les particularités de Nagios 4.5.13/4.5.14.
 tags: [upgrade, versions, compatibility, nagios-core, runbook]
 sources:
+  - id: openwiki-source-7a80b79a6fb3618cbfab08a2
+    resource: repo://.github/workflows/build.yml
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
   - id: openwiki-source-b41c1cb9f9c6db7b0c389a2a
@@ -14,10 +16,10 @@ sources:
     resource: repo://tests/migrate.sh
   - id: openwiki-source-2c4a8dc1cbd9d20dda8911b0
     resource: repo://tests/smoke.sh
-generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+generated: { by: "claude-code", at: "2026-11-22T14:35:39.579Z" }
 verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T19:16:56.093Z
+  - by: openwiki/0.9.0
+    at: 2026-11-22T14:35:39.579Z
 ---
 
 # Mise à jour des versions
@@ -54,6 +56,10 @@ Le tableau des versions du `README.md` indique Nagios Core 4.5.14, comme le Dock
 ## Rafraîchir les dépôts tiers figés
 
 qstat, nagiosgraph et les six collections de plugins sont figés sur un SHA dans le `Dockerfile` (`git -C <dossier> checkout <sha>`). Pour les mettre à jour : relever le dernier commit avec `git ls-remote <url> HEAD`, remplacer le SHA, puis refaire le build, le test de fumée et le test de migration.
+
+## Reconstruction de sécurité de l'image publiée
+
+Le workflow `.github/workflows/build.yml` se lance chaque lundi à 04:00 UTC (`schedule`) et peut aussi être lancé à la main (`workflow_dispatch`). Dans les deux cas, le job `publish` reconstruit l'image avec `docker build --pull` (image de base Ubuntu à jour, `apt-get upgrade` du Dockerfile) puis la pousse sur ghcr.io sous trois tags : `latest`, la version de Nagios Core (ex. `4.5.14`) et un tag immuable `<version>-AAAAMMJJ-<sha7>`. Le tag immuable permet de revenir à un build précis. Pour appliquer la mise à jour : `docker compose pull && docker compose up -d`.
 
 ## Règles pour ne pas casser les installations existantes
 

@@ -4,14 +4,14 @@ title: Construction de l'image
 description: Étapes du Dockerfile qui produisent l'image Nagios Core sur Ubuntu 24.04 — paquets, comptes, compilation des composants, Apache, overlay, copie des exemples dans /orig, volumes et ports.
 tags: [docker, build, dockerfile, nagios-core, apache]
 verified:
-  - by: openwiki/0.7.2
-    at: 2026-10-27T19:16:56.093Z
+  - by: openwiki/0.9.0
+    at: 2026-11-22T14:35:39.579Z
 sources:
   - id: openwiki-source-3c099d9af7cba6b30d6eaf07
     resource: repo://.gitattributes
   - id: openwiki-source-bb1ebe868e35e9e500714501
     resource: repo://Dockerfile
-generated: { by: "claude-code", at: "2026-10-27T19:16:56.093Z" }
+generated: { by: "claude-code", at: "2026-11-22T14:35:39.579Z" }
 ---
 
 # Construction de l'image
@@ -26,7 +26,7 @@ L'image entière est définie par un seul `Dockerfile` à la racine. Il n'y a pa
 
 ## Ordre des étapes
 
-1. **Paquets système** : préconfiguration de postfix via `debconf-set-selections`, puis un seul `apt-get install` (Apache, PHP, outils de compilation, bibliothèques Perl et Python pour les plugins, SNMP, postfix, rsyslog, runit, `parallel`…). Le cache apt est vidé dans la même couche.
+1. **Paquets système** : préconfiguration de postfix via `debconf-set-selections`, puis `apt-get update && apt-get upgrade -y` (correctifs de sécurité Ubuntu à chaque build) et un seul `apt-get install` (Apache, PHP, outils de compilation, bibliothèques Perl et Python pour les plugins, SNMP, postfix, rsyslog, runit, `parallel`, `tcsh` — interpréteur requis par des plugins dont le shebang est `#!/bin/csh`…). Le cache apt est vidé dans la même couche.
 2. **Comptes** : le groupe `nagios` est créé avec le GID 1001 et l'utilisateur `nagios` avec l'UID 997 (`useradd --system -u 997`). Ces identifiants fixes sont ceux de l'image d'origine `jasonrivers/nagios`, ce qui permet de garder l'accès aux fichiers des volumes existants (voir [Variables et volumes](../configuration/variables-et-volumes.md)).
 3. **qstat** : cloné depuis `multiplay/qstat`, figé sur un commit précis (`git checkout <sha>`), puis compilé.
 4. **Nagios Core** : clone de `NagiosEnterprises/nagioscore` au tag `$NAGIOS_BRANCH`, `./configure` avec `--prefix=/opt/nagios`, `--enable-event-broker` et les utilisateurs/groupes de commande, puis `make all install install-config install-commandmode install-webconf`.
