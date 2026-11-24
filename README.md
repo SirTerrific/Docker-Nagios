@@ -79,6 +79,23 @@ There are a number of environment variables that you can use to adjust the behav
 
 For best results your Nagios image should have access to both IPv4 & IPv6 networks 
 
+#### Troubleshooting: `Failed to create IO broker set: Cannot allocate memory`
+
+Nagios sizes its IO broker from the open-files limit (`nofile`). When the Docker daemon gives containers `nofile=infinity` (about 1 billion), the allocation fails and the container restarts in a loop. Check with `docker run --rm alpine sh -c 'ulimit -n'`, then set a limit:
+
+```sh
+docker run --ulimit nofile=65536:65536 ...
+```
+
+or in `docker-compose.yml` (already set in the example file):
+
+```yaml
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+```
+
 #### Credentials
 
 The default credentials for the web interface is `nagiosadmin` / `nagios`
