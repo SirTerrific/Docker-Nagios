@@ -10,6 +10,12 @@ version: '3'
 services:
   nagios:
     image: ghcr.io/sirterrific/docker-nagios:latest
+    # Sans limite explicite, le démon peut donner nofile=infinity (vu avec Docker 28.1.1) :
+    # Nagios échoue avec "Failed to create IO broker set: Cannot allocate memory".
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     volumes:
     - nagiosetc:/opt/nagios/etc
     - nagiosvar:/opt/nagios/var
