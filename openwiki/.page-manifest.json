@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "pages": {
     "/openwiki/architecture/construction-image.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:a292786970e13731257bee5a4f6a44e9acd7f6c7e640e6f30d3fbf5a4fc3f8fa",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     },
     "/openwiki/architecture/demarrage-et-supervision.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:bbd9684fa49a45d6c8ea812698bbe9b6cf0b07e5441fbb97d7d44c0588f85a4d",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     },
     "/openwiki/configuration/configuration-nagios.md": {
       "gitHead": "114ee0b62d1f9ba10bffc7a3f0596f39835874a2",
@@ -30,32 +30,32 @@
       "completedRunId": "a96d505c-7743-486e-a712-410298d821bf"
     },
     "/openwiki/integrations/modules-complementaires.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:55e5026e14f48229638d0e6892e4ada58ad4d1540dac411a24cb89b688c515d5",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     },
     "/openwiki/operations/mise-a-jour-versions.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:091871169b6711a89d625872442d03a2dff6b298269e236de94a1f04dc3c7e86",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     },
     "/openwiki/operations/tests-et-ci.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:8cd52a98610672f58307b84cd0b696bbd3338ae526e8aa5922a77a67a67637d9",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     },
     "/openwiki/quickstart.md": {
+      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
+      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865",
       "pageVersion": "sha256:f0301ecdb78d1af7ae98a4c91a4cf7a3fd2578c58e7d934cc5d5e835fac56851",
       "completedBy": "claude-code",
-      "completedRunId": "2997ff13-754a-4850-9c05-653724633355",
-      "gitHead": "610edefbac106a2a313bee29034da6239c2e6aca",
-      "sourceFingerprint": "sha256:a636ad657efbad50f2fb138f5870633b04f3115015d4bcc26637f2f2bb2ee865"
+      "completedRunId": "2997ff13-754a-4850-9c05-653724633355"
     }
   }
 }
